@@ -1,4 +1,25 @@
 {
+"Cria-um-server-express-estruturado": {
+	"prefix": "be-enb",
+	"body": [
+	  "const express = require('express');",
+	  "",
+	  "const server = express();",
+	  "",
+	  "server.use(express.json());",
+	  "",
+	  "const port = 3000;",
+	  "",
+	  "server.get('/', (req, res) => json({message: 'Hello World!'}))",
+	  "",
+	  "server listen(port);"
+	],
+	"description": "Cria um server express estruturado"
+  },
+
+
+
+	// Node MVC
 	"nodeMvc": {
 	"prefix": "be-mnc",
 	"body": [
@@ -43,7 +64,7 @@
       "",
       "export default routes;"
     ],
-    "description": "arquivoDeRotas"
+    "description": "Cria um a base de um arquivo de rotas"
   },
 
   "appJs": {
