@@ -199,7 +199,7 @@
 	  },
 
 	  "cria um model sequelize": {
-		"prefix": "be-model-sequerlize",
+		"prefix": "be-model-sequelize",
 		"body": [
 		  "module.exports = (sequelize, DataTypes) => {",
 		  "  const $TM_FILENAME_BASE = sequelize.define('$TM_FILENAME_BASE', {",
