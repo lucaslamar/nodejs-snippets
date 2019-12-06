@@ -79,6 +79,29 @@
 		],
 		"description": "cria rotas"
 	  },
+
+	  "cria uma middleware global": {
+		"prefix": "be-middleware-gobla",
+		"body": [
+		  "server.use(req, res, next) => {",
+		  "  next();",
+		  "});"
+		],
+		"description": "cria uma middleware global"
+	  },
+
+	  "cria uma middleware local": {
+		"prefix": "be-middleware-gobla",
+		"body": [
+		  "function ${1:functionName} (req, res, next) => {",
+		  "  next();",
+		  "});"
+		],
+		"description": "cria uma middleware local"
+	  },
+
+
+
 	
 	
 	
