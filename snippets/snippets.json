@@ -1,122 +1,190 @@
 {
-"Cria-um-server-express-estruturado": {
-	"prefix": "be-enb",
-	"body": [
-	  "const express = require('express');",
-	  "",
-	  "const server = express();",
-	  "",
-	  "server.use(express.json());",
-	  "",
-	  "const port = 3000;",
-	  "",
-	  "server.get('/', (req, res) => json({message: 'Hello World!'}))",
-	  "",
-	  "server listen(port);"
-	],
-	"description": "Cria um server express estruturado"
-  },
-
-
-
-	// Node MVC
-	"nodeMvc": {
-	"prefix": "be-mnc",
-	"body": [
-	  "class $TM_FILENAME_BASE  {",
-	  "    async index(req, res) {",
-	  "        return res.json({});",
-	  "",
-	  "     ",
-	  "    }",
-	  "",
-	  "    async store(req, res) {",
-	  "        return res.json({});",
-	  "",
-	  "     ",
-	  "    }",
-	  "",
-	  "    async update(req, res) {",
-	  "        return res.json({});",
-	  "",
-	  "     ",
-	  "    }",
-	  "",
-	  "    async delete(req, res) {",
-	  "        return res.json({});",
-	  "",
-	  "     ",
-	  "    }",
-	  "}",
-	  "",
-	  "export default new $TM_FILENAME_BASE ();",
-	  ""
-	],
-	"description": "cria um controller no modelo MVC."
-  },
-
-  "arquivoDeRotas": {
-    "prefix": "be-routesjs",
-    "body": [
-      "import { Router } from 'express';",
-      "",
-      "const routes = new Router();",
-      "",
-      "export default routes;"
-    ],
-    "description": "Cria um a base de um arquivo de rotas"
-  },
-
-  "appJs": {
-	"prefix": "be-appjs",
-	"body": [
-	  "import express from 'express';",
-	  "import routes from './routes';",
-	  "",
-	  "// import './database';",
-	  "",
-	  "class App {",
-	  "  constructor() {",
-	  "    this.server = express();",
-	  "    this.middlewares();",
-	  "    this.routes();",
-	  "  }",
-	  "",
-	  "  middlewares() {",
-	  "    this.server.use(express.json());",
-	  "  }",
-	  "",
-	  "  routes() {",
-	  "    this.server.use(routes);",
-	  "  }",
-	  "}",
-	  "export default new App().server;"
-	],
-	"description": "appJs"
-  },
-
-  "model-sequerlize": {
-    "prefix": "be-model-sequerlize",
-    "body": [
-      "import Sequelize, { Model } from 'sequelize';",
-      "",
-      "class $TM_FILENAME_BASE extends Model {",
-      "  static init(sequelize) {",
-      "    super.init(",
-      "      {",
-      "       \"//campos aqui\"",
-      "      },",
-      "      { sequelize }",
-      "    );",
-      "",
-      "    return this;",
-      "  }",
-      "}",
-      "",
-      "export default $TM_FILENAME_BASE;"
-    ],
-    "description": "be-model-sequerlize"
-  }
-
-  
-}
+	"Cria-um-server-express-estruturado": {
+		"prefix": "be-enb",
+		"body": [
+		  "const express = require('express');",
+		  "",
+		  "const server = express();",
+		  "",
+		  "server.use(express.json());",
+		  "",
+		  "const port = 3000;",
+		  "",
+		  "server.get('/', (req, res) => json({message: 'Hello World!'}))",
+		  "",
+		  "server.listen(port);"
+		],
+		"description": "Cria um server express estruturado"
+	  },
+	
+	  "cria uma rota GET": {
+		"prefix": "be-get",
+		"body": [
+		  "server.get('/${1:rotas}', ${2:middleware}, (req, res) => {",
+		  "  res.json({});",
+		  "});"
+		],
+		"description": "cria uma rota GET"
+	  },
+	
+	  
+	  "cria uma rota post": {
+		"prefix": "be-post",
+		"body": [
+		  "server.post('/${1:rotas}', ${2:middleware}, (req, res) => {",
+		  "  res.json({});",
+		  "});"
+		],
+		"description": "cria uma rota post"
+	  },
+	
+	  "cria uma rota put": {
+		"prefix": "be-put",
+		"body": [
+		  "server.put('/${1:rotas}/${2:id}', ${3:middleware}, (req, res) => {",
+		  "  res.json({});",
+		  "});"
+		],
+		"description": "cria uma rota put"
+	  },
+	
+	  "cria uma rota delete": {
+		"prefix": "be-delete",
+		"body": [
+		  "server.delete('/${1:rotas}/${2:id}', ${3:middleware}, (req, res) => {",
+		  "  res.json({});",
+		  "});"
+		],
+		"description": "cria uma rota delete"
+	  },
+	
+	  "cria rotas": {
+		"prefix": "be-api",
+		"body": [
+		  "server.get('/rotas', middleware, (req, res) => {",
+		  "  res.json({});",
+		  "});",
+		  "",
+		  "server.post('/usuarios', (req, res) => {",
+		  "  res.json({});",
+		  "});",
+		  "",
+		  "server.put('/rotas/:id', middleware, (req, res) => {",
+		  "  res.json({});",
+		  "});",
+		  "",
+		  "server.delete('/rotas/:id', middleware, (req, res) => {",
+		  "    res.json({});",
+		  "  });"
+		],
+		"description": "cria rotas"
+	  },
+	
+	
+	
+	
+	
+	
+	
+	
+		// Node MVC
+		"nodeMvc": {
+		"prefix": "be-mnc",
+		"body": [
+		  "class $TM_FILENAME_BASE  {",
+		  "    async index(req, res) {",
+		  "        return res.json({});",
+		  "",
+		  "     ",
+		  "    }",
+		  "",
+		  "    async store(req, res) {",
+		  "        return res.json({});",
+		  "",
+		  "     ",
+		  "    }",
+		  "",
+		  "    async update(req, res) {",
+		  "        return res.json({});",
+		  "",
+		  "     ",
+		  "    }",
+		  "",
+		  "    async delete(req, res) {",
+		  "        return res.json({});",
+		  "",
+		  "     ",
+		  "    }",
+		  "}",
+		  "",
+		  "export default new $TM_FILENAME_BASE ();",
+		  ""
+		],
+		"description": "cria um controller no modelo MVC."
+	  },
+	
+	  "arquivoDeRotas": {
+		"prefix": "be-routesjs",
+		"body": [
+		  "import { Router } from 'express';",
+		  "",
+		  "const routes = new Router();",
+		  "",
+		  "export default routes;"
+		],
+		"description": "Cria um a base de um arquivo de rotas"
+	  },
+	
+	  "appJs": {
+		"prefix": "be-appjs",
+		"body": [
+		  "import express from 'express';",
+		  "import routes from './routes';",
+		  "",
+		  "// import './database';",
+		  "",
+		  "class App {",
+		  "  constructor() {",
+		  "    this.server = express();",
+		  "    this.middlewares();",
+		  "    this.routes();",
+		  "  }",
+		  "",
+		  "  middlewares() {",
+		  "    this.server.use(express.json());",
+		  "  }",
+		  "",
+		  "  routes() {",
+		  "    this.server.use(routes);",
+		  "  }",
+		  "}",
+		  "export default new App().server;"
+		],
+		"description": "appJs"
+	  },
+	
+	  "model-sequerlize": {
+		"prefix": "be-model-sequerlize",
+		"body": [
+		  "import Sequelize, { Model } from 'sequelize';",
+		  "",
+		  "class $TM_FILENAME_BASE extends Model {",
+		  "  static init(sequelize) {",
+		  "    super.init(",
+		  "      {",
+		  "       \"//campos aqui\"",
+		  "      },",
+		  "      { sequelize }",
+		  "    );",
+		  "",
+		  "    return this;",
+		  "  }",
+		  "}",
+		  "",
+		  "export default $TM_FILENAME_BASE;"
+		],
+		"description": "be-model-sequerlize"
+	  }
+	
+	  
+	}
