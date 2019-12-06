@@ -172,11 +172,11 @@
 		  "}",
 		  "export default new App().server;"
 		],
-		"description": "appJs"
+		"description": "cria"
 	  },
 	
-	  "model-sequerlize": {
-		"prefix": "be-model-sequerlize",
+	  "mvc-model-sequelize": {
+		"prefix": "be-model-sequerlize-mvc",
 		"body": [
 		  "import Sequelize, { Model } from 'sequelize';",
 		  "",
@@ -195,7 +195,21 @@
 		  "",
 		  "export default $TM_FILENAME_BASE;"
 		],
-		"description": "cria uma model serquellize no padrao mvc"
+		"description": "cria uma model Sequelize no padrao mvc"
+	  },
+
+	  "cria um model sequelize": {
+		"prefix": "be-model-sequerlize",
+		"body": [
+		  "module.exports = (sequelize, DataTypes) => {",
+		  "  const $TM_FILENAME_BASE = sequelize.define('$TM_FILENAME_BASE', {",
+
+		  "  });",
+		  "",
+		  "  return $TM_FILENAME_BASE;",
+		  "}"
+		],
+		"description": "cria um model sequelize"
 	  },
 
 	  "cria uma base mongo": {

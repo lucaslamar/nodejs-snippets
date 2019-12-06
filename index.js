@@ -1,7 +1,6 @@
-import mongoose from 'mongoose';
+module.exports = (sequelize, DataTypes) => {
+  const index = sequelize.define('index', {
+  });
 
-const  ${index} Schema = new mongoose.Schema({
-   
-});
-
-export default mongoose.model(' index',  TM_FILENAME_BASESchema);
+  return index;
+}

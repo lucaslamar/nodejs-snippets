@@ -1,0 +1,32 @@
+{
+        "name": "BelleEpoqueNodeJS",
+        "description": "NodeJS snippets criados pela Belle Epoque",
+        "version": "1.0.0",
+        "displayName": "Belle Epoque NodeJS",
+        "publisher": "BelleEpoque",
+        "icon": "images/belleEpoqueLogo.png",
+        "galleryBanner": {
+          "color": "#00b894",
+          "theme": "dark"
+        },
+        "license": "MIT",
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets"
+        },
+        "engines": {
+          "vscode": "0.10.x"
+        },
+        "categories": [
+          "Snippets"
+        ],
+      "contributes": {
+        "snippets": [
+          {
+            "language": "javascript",
+            "path": "./snippets/snippets.json"
+          }
+        ]
+      }
+        
+      }
