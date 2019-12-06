@@ -1,15 +1,7 @@
-server.get('/rotas', middleware, (req, res) => {
-  res.json({});
+import mongoose from 'mongoose';
+
+const  ${index} Schema = new mongoose.Schema({
+   
 });
 
-server.post('/usuarios', (req, res) => {
-  res.json({});
-});
-
-server.put('/rotas/:id', middleware, (req, res) => {
-  res.json({});
-});
-
-server.delete('/rotas/:id', middleware, (req, res) => {
-    res.json({});
-  });
+export default mongoose.model(' index',  TM_FILENAME_BASESchema);

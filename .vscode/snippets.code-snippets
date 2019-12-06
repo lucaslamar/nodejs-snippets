@@ -81,7 +81,7 @@
 	  },
 
 	  "cria uma middleware global": {
-		"prefix": "be-middleware-gobla",
+		"prefix": "be-middleware-global",
 		"body": [
 		  "server.use(req, res, next) => {",
 		  "  next();",
@@ -91,7 +91,7 @@
 	  },
 
 	  "cria uma middleware local": {
-		"prefix": "be-middleware-gobla",
+		"prefix": "be-middleware-local",
 		"body": [
 		  "function ${1:functionName} (req, res, next) => {",
 		  "  next();",
@@ -206,8 +206,21 @@
 		  "",
 		  "export default $TM_FILENAME_BASE;"
 		],
-		"description": "be-model-sequerlize"
+		"description": "cria uma model serquellize no padrao mvc"
+	  },
+
+	  "cria uma base mongo": {
+		"prefix": "be-mongo",
+		"body": [
+		  "import mongoose from 'mongoose';",
+		  "",
+		  "const  ExemploSchema = new mongoose.Schema({",
+		  "   ",
+		  "});",
+		  "",
+		  "export default mongoose.model(' $TM_FILENAME_BASE',  ${2:ExemploSchema});"
+		],
+		"description": "cria uma base mongo"
 	  }
-	
 	  
 	}
