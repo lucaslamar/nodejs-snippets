@@ -2,290 +2,271 @@
 	"Cria-um-server-express-estruturado": {
 		"prefix": "be-see",
 		"body": [
-		  "const express = require('express');",
-		  "",
-		  "const server = express();",
-		  "",
-		  "server.use(express.json());",
-		  "",
-		  "const port = 3000;",
-		  "",
-		  "server.get('/', (req, res) => json({message: 'Hello World!'}))",
-		  "",
-		  "server.listen(port);"
+			"const express = require('express');",
+			"",
+			"const server = express();",
+			"",
+			"server.use(express.json());",
+			"",
+			"const port = 3000;",
+			"",
+			"server.get('/', (req, res) => json({message: 'Hello World!'}))",
+			"",
+			"server.listen(port);"
 		],
 		"description": "Cria um server express estruturado"
-	  },
+	},
 
-	  "cria promise": {
+	"cria promise": {
 		"prefix": "be-cria-promise",
 		"body": [
-		  "new Promise((resolve, reject) => {",
-		  "  let condition = false;",
-		  "  if(condition) {",
-		  "    resolve('data')",
-		  "  } else {",
-		  "    reject('error')",
-		  "}",
-		  "})"
+			"new Promise((resolve, reject) => {",
+			"  let condition = false;",
+			"  if(condition) {",
+			"    resolve('data')",
+			"  } else {",
+			"    reject('error')",
+			"}",
+			"})"
 		],
 		"description": "cria promise no padrao estruturado"
-	  },
-	
-	  "cria uma rota GET": {
+	},
+
+	"cria uma rota GET": {
 		"prefix": "be-get",
 		"body": [
-		  "server.get('/${1:rotas}', ${2:middleware}, (req, res) => {",
-		  "  res.json({});",
-		  "});"
+			"server.get('/${1:rotas}', ${2:middleware}, (req, res) => {",
+			"  res.json({});",
+			"});"
 		],
 		"description": "cria uma rota GET"
-	  },
-	
-	  
-	  "cria uma rota post": {
+	},
+
+	"cria uma rota post": {
 		"prefix": "be-post",
 		"body": [
-		  "server.post('/${1:rotas}', ${2:middleware}, (req, res) => {",
-		  "  res.json({});",
-		  "});"
+			"server.post('/${1:rotas}', ${2:middleware}, (req, res) => {",
+			"  res.json({});",
+			"});"
 		],
 		"description": "cria uma rota post"
-	  },
-	
-	  "cria uma rota put": {
+	},
+
+	"cria uma rota put": {
 		"prefix": "be-put",
 		"body": [
-		  "server.put('/${1:rotas}/${2:id}', ${3:middleware}, (req, res) => {",
-		  "  res.json({});",
-		  "});"
+			"server.put('/${1:rotas}/${2:id}', ${3:middleware}, (req, res) => {",
+			"  res.json({});",
+			"});"
 		],
 		"description": "cria uma rota put"
-	  },
-	
-	  "cria uma rota delete": {
+	},
+
+	"cria uma rota delete": {
 		"prefix": "be-delete",
 		"body": [
-		  "server.delete('/${1:rotas}/${2:id}', ${3:middleware}, (req, res) => {",
-		  "  res.json({});",
-		  "});"
+			"server.delete('/${1:rotas}/${2:id}', ${3:middleware}, (req, res) => {",
+			"  res.json({});",
+			"});"
 		],
 		"description": "cria uma rota delete"
-	  },
-	
-	  "cria rotas": {
+	},
+
+	"cria rotas": {
 		"prefix": "be-apis-rest",
 		"body": [
-		  "server.get('/rotas', middleware, (req, res) => {",
-		  "  res.json({});",
-		  "});",
-		  "",
-		  "server.post('/usuarios', (req, res) => {",
-		  "  res.json({});",
-		  "});",
-		  "",
-		  "server.put('/rotas/:id', middleware, (req, res) => {",
-		  "  res.json({});",
-		  "});",
-		  "",
-		  "server.delete('/rotas/:id', middleware, (req, res) => {",
-		  "    res.json({});",
-		  "  });"
+			"server.get('/rotas', middleware, (req, res) => {",
+			"  res.json({});",
+			"});",
+			"",
+			"server.post('/usuarios', (req, res) => {",
+			"  res.json({});",
+			"});",
+			"",
+			"server.put('/rotas/:id', middleware, (req, res) => {",
+			"  res.json({});",
+			"});",
+			"",
+			"server.delete('/rotas/:id', middleware, (req, res) => {",
+			"    res.json({});",
+			"  });"
 		],
 		"description": "cria todas as rotas"
-	  },
+	},
 
-	  "cria uma middleware global": {
+	"cria uma middleware global": {
 		"prefix": "be-middleware-global",
 		"body": [
-		  "server.use(req, res, next) => {",
+			"server.use(req, res, next) => {",
 			"",
 			"$1",
-		  	"next();",
-		  "});"
+			"next();",
+			"});"
 		],
 		"description": "cria uma middleware global no padrao estruturado"
-	  },
+	},
 
-	  "cria uma middleware local": {
+	"cria uma middleware local": {
 		"prefix": "be-middleware-local",
 		"body": [
-		  "function ${1:functionName} (req, res, next) => {",
+			"function ${1:functionName} (req, res, next) => {",
 			"",
 			"$2",
-		  "next();",
-		  "});"
+			"next();",
+			"});"
 		],
 		"description": "cria uma middleware local no padrao estruturado"
-	  },
+	},
 
-	  "cria uma middleware no padrao mvc": {
+	"cria uma middleware no padrao mvc": {
 		"prefix": "be-mmw",
 		"body": [
-		  "export default async (req, res, next) => {",
-		  "  $1",
-		  "  return next();",
-		  "}"
+			"export default async (req, res, next) => {",
+			"  $1",
+			"  return next();",
+			"}"
 		],
 		"description": "cria uma middleware no padrao mvc"
-	  },
+	},
 
-	  
-		"nodeMvc": {
+	"cria um controller no modelo MVC.": {
 		"prefix": "be-gc",
 		"body": [
-			"import ${1:Model} from '$2';",
+			"import Model from '';",
 			"",
-		  "class $TM_FILENAME_BASE  {",
-		  "    async index(req, res) {",
-				"",
-				"",
-		  "        return res.json({});",
-		  "",
-		  "     ",
-		  "    }",
-		  "",
-		  "    async store(req, res) {",
-		  		"",
-				"",
-		  "        return res.json({});",
-		  "",
-		  "     ",
-		  "    }",
-		  "",
-		  "    async update(req, res) {",
-		  		"",
-				"",
-		  "        return res.json({});",
-		  "",
-		  "     ",
-		  "    }",
-		  "",
-		  "    async delete(req, res) {",
-		  		"",
-		  		"",
-		  "        return res.json({});",
-		  "",
-		  "     ",
-		  "    }",
-		  "}",
-		  "",
-		  "export default new $TM_FILENAME_BASE();",
-		  ""
+			"class TM_FILENAME_BASE {",
+			"    async index(req, res) {",
+			"",
+			"        return res.json({}); ",
+			"    }",
+			"    async store(req, res) {",
+			"",
+			"        return res.json({});",
+			"    }",
+			"",
+			"    async update(req, res) {",
+			"",
+			"        return res.json({});",
+			"    }",
+			"",
+			"    async delete(req, res) {",
+			"",
+			"        return res.json({});",
+			"    }",
+			"}",
+			"",
+			"export default new TM_FILENAME_BASE();",
+			""
 		],
 		"description": "cria um controller no modelo MVC."
-	  },
-	
-	  "Cria um a base de um arquivo de routes.js no padrao mvc": {
+	},
+
+	"Cria um a base de um arquivo de routes.js no padrao mvc": {
 		"prefix": "be-fgr",
 		"body": [
-		  "import { Router } from 'express';",
-		  "",
-		  "import ${2:Rota}Controller from '';",
-		  "",
-		  "const routes = new Router();",
-		  "",
-		  "routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
-		  "routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
-		  "routes.put('/${1:rotas}/:id', ${2:Rota}Controller.update);",
-		  "routes.delete('/${1:rotas}/:id', ${2:Rota}Controller.delete);",
-		  "",
-		  "",
-		  "export default routes;"
+			"import { Router } from 'express';",
+			"",
+			"import ${2:Rota}Controller from '';",
+			"",
+			"const routes = new Router();",
+			"",
+			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
+			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
+			"routes.put('/${1:rotas}/:id', ${2:Rota}Controller.update);",
+			"routes.delete('/${1:rotas}/:id', ${2:Rota}Controller.delete);",
+			"",
+			"",
+			"export default routes;"
 		],
 		"description": "Cria um a base de um arquivo de routes.js no padrao mvc"
-	  },
+	},
 
-	  "Cria rotas no padrao mvc": {
+	"Cria rotas no padrao mvc": {
 		"prefix": "be-gr",
 		"body": [
-		  "routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
-		  "routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
-		  "routes.put('/${1:rotas}/:id', ${2:Rota}Controller.update);",
-		  "routes.delete('/${1:rotas}/:id', ${2:Rota}Controller.delete);"
+			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
+			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
+			"routes.put('/${1:rotas}/:id', ${2:Rota}Controller.update);",
+			"routes.delete('/${1:rotas}/:id', ${2:Rota}Controller.delete);"
 		],
 		"description": "Cria rotas no padrao mvc"
-	  },
+	},
 
-	  
-	
-	  "appJs": {
+	"appJs": {
 		"prefix": "be-app",
 		"body": [
-		  "import express from 'express';",
-		  "import routes from './routes';",
-		  "",
-		  "// import './database';",
-		  "",
-		  "class App {",
-		  "  constructor() {",
-		  "    this.server = express();",
-		  "    this.middlewares();",
-		  "    this.routes();",
-		  "  }",
-		  "",
-		  "  middlewares() {",
-		  "    this.server.use(express.json());",
-		  "  }",
-		  "",
-		  "  routes() {",
-		  "    this.server.use(routes);",
-		  "  }",
-		  "}",
-		  "export default new App().server;"
+			"import express from 'express';",
+			"import routes from './routes';",
+			"",
+			"// import './database';",
+			"",
+			"class App {",
+			"  constructor() {",
+			"    this.server = express();",
+			"    this.middlewares();",
+			"    this.routes();",
+			"  }",
+			"",
+			"  middlewares() {",
+			"    this.server.use(express.json());",
+			"  }",
+			"",
+			"  routes() {",
+			"    this.server.use(routes);",
+			"  }",
+			"}",
+			"export default new App().server;"
 		],
 		"description": "cria um arquivo app.js no modelo MVC"
-	  },
-	
-	  "mvc-model-sequelize": {
+	},
+
+	"mvc-model-sequelize": {
 		"prefix": "be-mvc-model-sequelize",
 		"body": [
-		  "import Sequelize, { Model } from 'sequelize';",
-		  "",
-		  "class $TM_FILENAME_BASE extends Model {",
-		  "  static init(sequelize) {",
-		  "    super.init(",
-		  "      {",
-		  "       \"//campos aqui\"",
-		  "      },",
-		  "      { sequelize }",
-		  "    );",
-		  "",
-		  "    return this;",
-		  "  }",
-		  "}",
-		  "",
-		  "export default $TM_FILENAME_BASE;"
+			"import Sequelize, { Model } from 'sequelize';",
+			"",
+			"class $TM_FILENAME_BASE extends Model {",
+			"  static init(sequelize) {",
+			"    super.init(",
+			"      {",
+			"       \"//campos aqui\"",
+			"      },",
+			"      { sequelize }",
+			"    );",
+			"",
+			"    return this;",
+			"  }",
+			"}",
+			"",
+			"export default $TM_FILENAME_BASE;"
 		],
 		"description": "cria uma model Sequelize no padrao mvc"
-	  },
+	},
 
-	  "cria um model sequelize": {
+	"cria um model sequelize": {
 		"prefix": "be-model-sequelize",
 		"body": [
-		  "module.exports = (sequelize, DataTypes) => {",
-		  "  const $TM_FILENAME_BASE = sequelize.define('$TM_FILENAME_BASE', {",
-
-		  "  });",
-		  "",
-		  "  return $TM_FILENAME_BASE;",
-		  "}"
+			"module.exports = (sequelize, DataTypes) => {",
+			"  const $TM_FILENAME_BASE = sequelize.define('$TM_FILENAME_BASE', {",
+			"  });",
+			"",
+			"  return $TM_FILENAME_BASE;",
+			"}"
 		],
 		"description": "cria um model sequelize"
-	  },
-
-	  "cria uma base mongo": {
+	},
+	
+	"cria uma base mongo": {
 		"prefix": "be-mongo",
 		"body": [
-		  "import mongoose from 'mongoose';",
-		  "",
-		  "const ${1:ExemploSchema} = new mongoose.Schema({",
-		  "   ",
-		  "});",
-		  "",
-		  "export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});"
+			"import mongoose from 'mongoose';",
+			"",
+			"const ${1:ExemploSchema} = new mongoose.Schema({",
+			"   ",
+			"});",
+			"",
+			"export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});"
 		],
 		"description": "cria uma base mongo"
-	  }
-	  
 	}
+}
