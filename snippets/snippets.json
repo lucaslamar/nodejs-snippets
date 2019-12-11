@@ -1,4 +1,15 @@
 {
+
+	"cria-uma-middleware-de-error": {
+		"prefix": "be-error-middleware",
+		"body": [
+			"app.use(function(err, req, res, next) {",
+			"  console.error(err.stack);",
+			"  res.status(500).send('Algo Errado :/!');",
+			"});"
+		],
+		"description": "Cria uma middleware de error"
+	},
 	
 	"cria-uma-base-mongo": {
 		"prefix": "be-mongo",
@@ -15,7 +26,7 @@
 	},
 
 	"cria-um-server-express-estruturado": {
-		"prefix": "be-see",
+		"prefix": "be-server",
 		"body": [
 			"const express = require('express');",
 			"",
@@ -214,9 +225,9 @@
 			"const routes = new Router();",
 			"",
 			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
-			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
-			"routes.put('/${1:rotas}/:id', ${2:Rota}Controller.update);",
-			"routes.delete('/${1:rotas}/:id', ${2:Rota}Controller.delete);",
+			"routes.post('/${1:rotas}', ${3:Rota}Controller.store);",
+			"routes.put('/${1:rotas}/:${2:id}', ${3:Rota}Controller.update);",
+			"routes.delete('/${1:rotas}/:${2:id}', ${3:Rota}Controller.delete);",
 			"",
 			"",
 			"export default routes;"
@@ -227,12 +238,50 @@
 		"prefix": "be-gr",
 		"body": [
 			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
-			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
-			"routes.put('/${1:rotas}/:id', ${2:Rota}Controller.update);",
-			"routes.delete('/${1:rotas}/:id', ${2:Rota}Controller.delete);"
+			"routes.post('/${1:rotas}', ${3:Rota}Controller.store);",
+			"routes.put('/${1:rotas}/:${2:id}', ${3:Rota}Controller.update);",
+			"routes.delete('/${1:rotas}/:${2:id}', ${3:Rota}Controller.delete);"
 		],
 		"description": "Cria rotas no padrão MVC"
 	},
+
+	"cria-uma-rota-index-mvc": {
+		"prefix": "be-gri",
+		"body": [
+			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
+			""
+		],
+		"description": "Cria uma rota index MVC"
+	},
+
+	"cria-uma-rota-post-mvc": {
+		"prefix": "be-grpo",
+		"body": [
+			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
+			""
+		],
+		"description": "Cria uma rota post MVC"
+	},
+
+	"cria-uma-rota-put-mvc": {
+		"prefix": "be-grpu",
+		"body": [
+			"routes.put('/${1:rotas}/:${2:id}', ${3:Rota}Controller.update);",
+			""
+		],
+		"description": "Cria uma rota put MVC"
+	},
+
+	"cria-uma-rota-delete-mvc": {
+		"prefix": "be-grd",
+		"body": [
+			"routes.delete('/${1:rotas}/:${2:id}', ${3:Rota}Controller.delete);",
+			""
+		],
+		"description": "Cria uma rota delete MVC"
+	},
+
+
 	
 	"cria-um-controller-no-modelo-mvc.": {
 		"prefix": "be-gc",
@@ -267,7 +316,7 @@
 	},
 	
 	"cria-uma-middleware-no-padrao-mvc": {
-		"prefix": "be-mmw",
+		"prefix": "be-middleware-mvc",
 		"body": [
 			"export default async (req, res, next) => {",
 			"  $1",
