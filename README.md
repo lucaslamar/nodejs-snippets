@@ -14,7 +14,7 @@
 <br />
 <p align="center">
   <a href="https://www.linkedin.com/in/lucas-lamar-531930102/">
-    <img src="https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/imagens/belleEpoqueLogo.png" width="400px" alt="Logo">
+    <img src="https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/imagens/belleEpoqueLogo.png" width="200px" alt="Logo">
     
   </a>
 
