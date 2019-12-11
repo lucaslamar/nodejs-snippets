@@ -14,7 +14,8 @@
 <br />
 <p align="center">
   <a href="https://www.linkedin.com/in/lucas-lamar-531930102/">
-    <img src="https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/src/imagens/belleEpoqueLogo.png" alt="Logo">
+    <img src=<img alt="Gympoint" title="Gympoint" src="https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/src/imagens/belleEpoqueLogo.png" width="200px" alt="Logo">
+    
   </a>
 
   <h3 align="center">NodeJs Snippets</h3>
@@ -54,7 +55,7 @@ Para instalar uma extensão você pode executar o **Command Pallete** através d
 
 Quando você instalar a Extensão o desenvolvimento em React Native será bem mais divertido.
 
-![Create React Native Component]()
+![Create React Native Component](https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/src/imagens/belle.gif)
 
 ### Snippets
 
