@@ -1,17 +1,5 @@
-{
-
-	"cria-uma-middleware-de-error": {
-		"prefix": "be-error-middleware",
-		"body": [
-			"app.use(function(err, req, res, next) {",
-			"  console.error(err.stack);",
-			"  res.status(500).send('Algo Errado :/!');",
-			"});"
-		],
-		"description": "Cria uma middleware de error"
-	},
-	
-	"cria-uma-base-mongo": {
+{	
+	"create-a-base-mongo": {
 		"prefix": "be-mongo",
 		"body": [
 			"import mongoose from 'mongoose';",
@@ -22,10 +10,10 @@
 			"",
 			"export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});"
 		],
-		"description": "Cria uma base mongo."
+		"description": " Creates a mongoDB schema. || Cria uma schema mongoDB."
 	},
 
-	"cria-um-server-express-estruturado": {
+	"create-a-server-express-structured": {
 		"prefix": "be-server",
 		"body": [
 			"const express = require('express');",
@@ -40,10 +28,10 @@
 			"",
 			"server.listen(port);"
 		],
-		"description": "Cria um server express no padrão estruturado."
+		"description": "Create an express server in structured pattern. || Cria um server express estruturado."
 	},
-	"cria-promise": {
-		"prefix": "be-cria-promise",
+	"create-promise": {
+		"prefix": "be-create-promise",
 		"body": [
 			"new Promise((resolve, reject) => {",
 			"  let condition = false;",
@@ -54,11 +42,11 @@
 			"}",
 			"})"
 		],
-		"description": "Cria uma promise no padrão estruturado."
+		"description": "Create a promise || Cria uma promise ."
 	},
 	
-	"cria-rotas-api-rest": {
-		"prefix": "be-routes-apis-rest",
+	"create-routes-api-rest": {
+		"prefix": "be-rar",
 		"body": [
 			"server.get('/${1:rotas}', middleware, (req, res) => {",
 			"  res.json({});",
@@ -76,82 +64,83 @@
 			"    res.json({});",
 			"  });"
 		],
-		"description": "Cria todas as rotas, Api Rest"
+		"description": " Create all routes, Api Rest || Cria todas as rotas, Api Rest"
 	},
-	"cria-uma-rota-get-estrturada": {
+
+	"create-get-structured-route": {	
 		"prefix": "be-get",
 		"body": [
 			"server.get('/${1:rotas}', (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
-		"description": "Cria uma rota Get no padrão estrtuturado."
+		"description": "Create a structured Get route || Cria uma rota Get estruturada."
 	},
-	"cria-uma-rota-get-estrturada-middleware": {
+	"create-get-structured-middleware-route": {
 		"prefix": "be-mget",
 		"body": [
 			"server.get('/${1:rotas}', ${2:middleware}, (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
-		"description": "Cria uma rota Get no padrão estrtuturado com uma middleware."
+		"description": " Creates a Get route structured with middleware. || Cria uma rota Get estrtuturada com middleware."
 	},
-	"cria-uma-rota-post-estruturadaa": {
+	"create-a-post-structured-route": {
 		"prefix": "be-post",
 		"body": [
 			"server.post('/${1:rotas}', (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
-		"description": "Cria uma rota Post no padrão estrtuturado."
+		"description":  "Create a Structured Post Route ||Cria uma rota Post estrtuturada."
 	},
-	"cria-uma-rota-post-estrturada-middleware": {
+	"create-route-post-structured-middleware": {
 		"prefix": "be-mpost",
 		"body": [
 			"server.post('/${1:rotas}', ${2:middleware}, (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
-		"description": "Cria uma rota Post no padrão estrtuturado com uma middleware."
+		"description": "Create a Post route structured with middleware. || Cria uma rota Post estrtuturado com middleware."
 	},
-	"cria-uma-rota-put-estruturada": {
+	"create-a-put-structured-route": {
 		"prefix": "be-put",
 		"body": [
 			"server.put('/${1:rotas}/${2:id}', (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
-		"description": "Cria uma rota Put no padrão estrtuturado."
+		"description": "Create a Structured Put Route || Cria uma rota Put estrtuturada."
 	},
-	"cria-uma-rota-put-estrturada-middleware": {
+	"create-a-route-put-structured-middleware": {
 		"prefix": "be-mput",
 		"body": [
 			"server.put('/${1:rotas}/${2:id}', ${3:middleware}, (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
-		"description": "Cria uma rota Put no padrão estrtuturado com uma middleware."
+		"description": "Create a structured Put route with middleware. || Cria uma rota Put estrtuturada com middleware."
 	},
-	"cria-uma-rota-delete-estrturada": {
+	"create-a-route-delete-structured": {
 		"prefix": "be-delete",
 		"body": [
 			"server.delete('/${1:rotas}/${2:id}', (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
-		"description": "Cria uma rota Delete no padrão estrtuturado."
+		"description": "Create a structured delete route. || Cria uma rota Delete estrtuturada."
 	},
-	"cria-uma-rota-delete-estrturada-middleware": {
+	"create-a-route-delete-structured-middleware": {
 		"prefix": "be-mdelete",
 		"body": [
 			"server.delete('/${1:rotas}/${2:id}', ${3:middleware}, (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
-		"description": "Cria uma rota Delete no padrão estrtuturado com uma middleware."
+		"description": "Create a structured delete route with middleware. || Cria uma rota Delete no padrão estrtuturado com uma middleware."
 	},
 	
-	"cria-uma-middleware-global": {
+	"create-a-middleware-global": {
 		"prefix": "be-middleware-global",
 		"body": [
 			"server.use(req, res, next) => {",
@@ -160,9 +149,21 @@
 			"next();",
 			"});"
 		],
-		"description": "Cria uma middleware global no padrão estruturado."
+		"description": "Create structured global middleware. || Cria um middlware global"
 	},
-	"cria-uma-middleware-local": {
+
+	"create-a-middleware-error": {
+		"prefix": "be-error-middleware",
+		"body": [
+			"app.use(function(err, req, res, next) {",
+			"  console.error(err.stack);",
+			"  res.status(500).send('Algo Errado :/!');",
+			"});"
+		],
+		"description": "Create structured error middleware. || Cria uma middleware de error estruturada"
+	},
+
+	"create-a-middleware-local": {
 		"prefix": "be-middleware-local",
 		"body": [
 			"function ${1:functionName} (req, res, next) => {",
@@ -171,10 +172,10 @@
 			"next();",
 			"});"
 		],
-		"description": "Cria uma middleware local no padrao estruturado."
+		"description": "Create local middleware on structured pattern || Cria uma middleware local no padrao estruturado."
 	},
 	
-	"cria-um-model-sequelize": {
+	"create-a-model-sequelize": {
 		"prefix": "be-model-sequelize",
 		"body": [
 			"module.exports = (sequelize, DataTypes) => {",
@@ -184,10 +185,10 @@
 			"  return $TM_FILENAME_BASE;",
 			"}"
 		],
-		"description": "Cria uma model Sequelize."
+		"description": "Creates a Sequelize model. || Cria uma model Sequelize."
 	},
 	
-	"estrutura-appjs-mvc": {
+	"structure-appjs-mvc": {
 		"prefix": "be-app",
 		"body": [
 			"import express from 'express';",
@@ -212,10 +213,10 @@
 			"}",
 			"export default new App().server;"
 		],
-		"description": "Cria um arquivo app.js no modelo MVC."
+		"description": "Create an app.js MVC file || Cria um arquivo app.js MVC."
 	},
 	
-	"cria-uma-base-de-um-arquivo-de-routes.js-no-padrao-mvc": {
+	"create-file-routes.js-mvc": {
 		"prefix": "be-fgr",
 		"body": [
 			"import { Router } from 'express';",
@@ -232,9 +233,9 @@
 			"",
 			"export default routes;"
 		],
-		"description": "Cria um a base de um arquivo de routes.js no padrão MVC."
+		"description": " Creates routes.js in the MVC pattern. || Cria routes.js no padrão MVC."
 	},
-	"Cria-todas-rotas-no-padrao-mvc": {
+	"create-all-routes-on-default-mvc": {
 		"prefix": "be-gr",
 		"body": [
 			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
@@ -242,48 +243,48 @@
 			"routes.put('/${1:rotas}/:${2:id}', ${3:Rota}Controller.update);",
 			"routes.delete('/${1:rotas}/:${2:id}', ${3:Rota}Controller.delete);"
 		],
-		"description": "Cria rotas no padrão MVC"
+		"description": " create MVC routes || Cria rotas no padrão MVC"
 	},
 
-	"cria-uma-rota-index-mvc": {
+	"create-a-route-index-mvc": {
 		"prefix": "be-gri",
 		"body": [
 			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
 			""
 		],
-		"description": "Cria uma rota index MVC"
+		"description": "Create an MVC index route || Cria uma rota index MVC"
 	},
 
-	"cria-uma-rota-post-mvc": {
+	"create-a-route-post-mvc": {
 		"prefix": "be-grpo",
 		"body": [
 			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
 			""
 		],
-		"description": "Cria uma rota post MVC"
+		"description": "Create an MVC post route||Cria uma rota post MVC"
 	},
 
-	"cria-uma-rota-put-mvc": {
+	"create-a-route-put-mvc": {
 		"prefix": "be-grpu",
 		"body": [
 			"routes.put('/${1:rotas}/:${2:id}', ${3:Rota}Controller.update);",
 			""
 		],
-		"description": "Cria uma rota put MVC"
+		"description": "Create an MVC put route || Cria uma rota put MVC"
 	},
 
-	"cria-uma-rota-delete-mvc": {
+	"create-a-route-delete-mvc": {
 		"prefix": "be-grd",
 		"body": [
 			"routes.delete('/${1:rotas}/:${2:id}', ${3:Rota}Controller.delete);",
 			""
 		],
-		"description": "Cria uma rota delete MVC"
+		"description": " Create an MVC delete route ||Cria uma rota delete MVC"
 	},
 
 
 	
-	"cria-um-controller-no-modelo-mvc.": {
+	"create-a-controller-in-mvc-model.": {
 		"prefix": "be-gc",
 		"body": [
 			"import Model from '';",
@@ -312,10 +313,10 @@
 			"export default new TM_FILENAME_BASE();",
 			""
 		],
-		"description": "Cria um controller no modelo MVC."
+		"description": "Creates a controller in the MVC model. || Cria um controller no modelo MVC."
 	},
 	
-	"cria-uma-middleware-no-padrao-mvc": {
+	"create-a-middleware-no-standard-mvc": {
 		"prefix": "be-middleware-mvc",
 		"body": [
 			"export default async (req, res, next) => {",
@@ -323,10 +324,10 @@
 			"  return next();",
 			"}"
 		],
-		"description": "Cria uma middleware no padrao MVC"
+		"description": " Create MVC middleware || Cria uma middleware no padrao MVC"
 	},
 	
-	"mvc-model-sequelize": {
+	"config-model-sequelize": {
 		"prefix": "be-mvc-model-sequelize",
 		"body": [
 			"import Sequelize, { Model } from 'sequelize';",
@@ -346,6 +347,6 @@
 			"",
 			"export default $TM_FILENAME_BASE;"
 		],
-		"description": "Cria uma model Sequelize no padrão MVC."
+		"description": "Create a Sequelize model with config."
 	}
 }
