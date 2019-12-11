@@ -62,35 +62,32 @@ Abaixo segue a lista com todos os Snippets disponíveis e os gatilhos para cada 
 
 |                 Gatilho | Conteúdo                                                                      |
 | ----------------------: | ----------------------------------------------------------------------------- |
-|                 `be-mongo →` | Cria uma base **mongoDB**                                               |
-|                `be-server →` | Cria um **server express** estruturado                        |
-|                `be-create-promise →` | Cria uma **Promise**                                              |
-|               `be-gar →` |  Cria todas as **rotas**, Api Rest                       |
-|                `be-get →` | Cria uma rota **Get**                                            |
-|           `be-mget →` | Cria uma rota **Get** estrtuturada com **middleware**                      |
-|                 `be-post  →` |  Cria uma rota **Post**                                      |
-|     `be-mpost →` | Cria uma rota **Post** estrtuturada com **middleware**                                        |
-|  
-|           `be-put →` |  Cria uma rota **Put**
-                                        |
-|                `be-mput →` | Cria uma rota **Put** estrtuturada com **middleware**                                                                  |
-|              `be-delete →` |  Cria uma rota **Delete**
-                                              |
-|       `be-mdelete →` | Cria uma rota **Delete** estrtuturada com **middleware**                                |
-| `be-middleware-global →` | Cria um **middlware** global |
-`be-error-middleware →` | Cria uma **middleware de error** estruturada |
-`"be-middleware-local →` |Cria uma **middleware local** no padrao estruturado  |
-`be-model-sequelize →` | Cria uma **model Sequelize** |
-`be-app →` | Cria um arquivo **app.js** **MVC** |
-`be-fgr →` | Cria **routes.js** no padrão **MVC** |
-`be-gr →` | Cria **rotas** no padrão **MVC** |
-`be-gri →` | Cria uma rota **index** **MVC** |
-`be-grpo →` | Cria uma rota **post** **MVC** |
-`be-grpu →` |Cria uma rota **put** **MVC** |
-`be-grd →` | Cria uma rota **delete** **MVC** |
-`be-gc →` | Cria um **controller** no modelo **MVC** |
-`be-middleware-mvc →` | Cria uma **middleware** no padrão **MVC** |
-`be-mvc-model-sequelize →` | Cria uma **model Sequelize** com config Saga** |
+|               `be-mongo →` | Cria uma base **mongoDB**                                              |
+|               `be-server →` | Cria um **server express** estruturado                                                |
+|               `be-create-promise →` | Cria uma **Promise**                        |
+|                `be-gar →` |  Cria todas as **rotas**, Api Rest                                               |
+|               `be-get →` | Cria uma rota **Get**                       |
+|                `be-mget →` | Cria uma rota **Get** estrtuturada com **middleware**                                             |
+|                `be-post  →` |  Cria uma rota **Post**                       |
+|                 `be-mpost →` | Cria uma rota **Post** estrtuturada com **middleware**                                      |
+|     `be-put →` |  Cria uma rota **Put**                                         |
+|  `be-mput →` | Cria uma rota **Put** estrtuturada com **middleware**                                      |
+|     `be-delete →` |  Cria uma rota **Delete**     |
+|       `be-mdelete →` | Cria uma rota **Delete** estrtuturada com **middleware**                                        |
+|           `be-middleware-global →` | Cria um **middlware** global                                       |
+|                `be-error-middleware →` | Cria uma **middleware de error** estruturada                                                                  |
+|              `"be-middleware-local →` |Cria uma **middleware local** no padrao estruturado                                               |
+|       `be-model-sequelize →` | Cria uma **model Sequelize**                                |
+| `be-app →` | Cria um arquivo **app.js** **MVC**  |
+|  `be-fgr →` | Cria **routes.js** no padrão **MVC** 
+|`be-gr →` | Cria **rotas** no padrão **MVC** |
+|`be-gri →` | Cria uma rota **index** **MVC** |
+|`be-grpo →` | Cria uma rota **post** **MVC** |
+|`be-grpu →` | Cria uma rota **put** **MVC** |
+|`be-grd →` | Cria uma rota **delete** **MVC** | 
+|`be-gc →` | Cria um **controller** no modelo **MVC** | 
+|`be-middleware-mvc →` | Cria uma **middleware** no padrão **MVC** |
+|`be-mvc-model-sequelize →` | Cria uma **model Sequelize** com config   |
 
 <!-- CONTRIBUTING -->
 
