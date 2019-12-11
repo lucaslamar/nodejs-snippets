@@ -112,5 +112,5 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ## Contato
 
-Rocketseat - [Github](https://github.com/lucaslamar) - **lucass.lamar@gmail.com.br**
+Lucas Lamar - [Github](https://github.com/lucaslamar) - **lucass.lamar@gmail.com.br**
 
