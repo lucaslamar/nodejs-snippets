@@ -4,11 +4,12 @@
 *** Request ou abra uma Issue com a tag "sugestão".
 *** Obrigado novamente! Agora vamos rodar esse projeto incrível :D
 -->
-
+<!--
 [![Visual Studio Marketplace Version]()]()
 [![Visual Studio Marketplace Installs]()]()
 [![Visual Studio Marketplace Rating]()]()
 ![GitHub]()
+-->
 
 <!-- PROJECT LOGO -->
 <br />
@@ -53,7 +54,7 @@ Para instalar uma extensão você pode executar o **Command Pallete** através d
 - JavaScript (.js)
 ### Como Usar?
 
-Quando você instalar a Extensão o desenvolvimento em React Native será bem mais divertido.
+Quando você instalar a Extensão o desenvolvimento em Nodejs será bem mais divertido.
 
 ![Create React Native Component](https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/imagens/belle.gif)
 
