@@ -5,16 +5,18 @@
 *** Obrigado novamente! Agora vamos rodar esse projeto incrível :D
 -->
 
+<!--
 [![Visual Studio Marketplace Version]()]()
 [![Visual Studio Marketplace Installs]()]()
 [![Visual Studio Marketplace Rating]()]()
 ![GitHub]()
+-->
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://www.linkedin.com/in/lucas-lamar-531930102/">
-    <img src="https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/imagens/belleEpoqueLogo.png" width="400px" alt="Logo">
+    <img src="imagens/belleEpoqueLogo.png" width="400px" alt="Logo">
     
   </a>
 
@@ -55,40 +57,40 @@ Para instalar uma extensão você pode executar o **Command Pallete** através d
 
 Quando você instalar a Extensão o desenvolvimento em React Native será bem mais divertido.
 
-![Create React Native Component](https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/imagens/belle.gif)
+![NodeJs Snnipets](imagens/belle.gif)
 
 ### Snippets
 
 Abaixo segue a lista com todos os Snippets disponíveis e os gatilhos para cada um. O **⇥** significa a tecla `TAB`.
 
-|                 Gatilho | Conteúdo                                                                      |
-| ----------------------: | ----------------------------------------------------------------------------- |
-|               `be-mongo →` | Cria uma base **mongoDB**                                              |
-|               `be-server →` | Cria um **server express** estruturado                                                |
-|               `be-create-promise →` | Cria uma **Promise**                        |
-|                `be-gar →` |  Cria todas as **rotas**, Api Rest                                               |
-|               `be-get →` | Cria uma rota **Get**                       |
-|                `be-mget →` | Cria uma rota **Get** estrtuturada com **middleware**                                             |
-|                `be-post  →` |  Cria uma rota **Post**                       |
-|                 `be-mpost →` | Cria uma rota **Post** estrtuturada com **middleware**                                      |
-|     `be-put →` |  Cria uma rota **Put**                                         |
-|  `be-mput →` | Cria uma rota **Put** estrtuturada com **middleware**                                      |
-|     `be-delete →` |  Cria uma rota **Delete**     |
-|       `be-mdelete →` | Cria uma rota **Delete** estrtuturada com **middleware**                                        |
-|           `be-middleware-global →` | Cria um **middlware** global                                       |
-|                `be-error-middleware →` | Cria uma **middleware de error** estruturada                                                                  |
-|              `"be-middleware-local →` |Cria uma **middleware local** no padrao estruturado                                               |
-|       `be-model-sequelize →` | Cria uma **model Sequelize**                                |
-| `be-app →` | Cria um arquivo **app.js** **MVC**  |
-|  `be-fgr →` | Cria **routes.js** no padrão **MVC** 
-|`be-gr →` | Cria **rotas** no padrão **MVC** |
-|`be-gri →` | Cria uma rota **index** **MVC** |
-|`be-grpo →` | Cria uma rota **post** **MVC** |
-|`be-grpu →` | Cria uma rota **put** **MVC** |
-|`be-grd →` | Cria uma rota **delete** **MVC** | 
-|`be-gc →` | Cria um **controller** no modelo **MVC** | 
-|`be-middleware-mvc →` | Cria uma **middleware** no padrão **MVC** |
-|`be-mvc-model-sequelize →` | Cria uma **model Sequelize** com config   |
+|                    Gatilho | Conteúdo                                                 |
+|---------------------------:|----------------------------------------------------------|
+|               `be-mongo →` | Cria uma base **mongoDB**                                |
+|              `be-server →` | Cria um **server express** estruturado                   |
+|      `be-create-promise →` | Cria uma **Promise**                                     |
+|                 `be-gar →` | Cria todas as **rotas**, Api Rest                        |
+|                 `be-get →` | Cria uma rota **Get**                                    |
+|                `be-mget →` | Cria uma rota **Get** estrtuturada com **middleware**    |
+|               `be-post  →` | Cria uma rota **Post**                                   |
+|               `be-mpost →` | Cria uma rota **Post** estrtuturada com **middleware**   |
+|                 `be-put →` | Cria uma rota **Put**                                    |
+|                `be-mput →` | Cria uma rota **Put** estrtuturada com **middleware**    |
+|              `be-delete →` | Cria uma rota **Delete**                                 |
+|             `be-mdelete →` | Cria uma rota **Delete** estrtuturada com **middleware** |
+|   `be-middleware-global →` | Cria um **middlware** global                             |
+|    `be-error-middleware →` | Cria uma **middleware de error** estruturada             |
+|   `"be-middleware-local →` | Cria uma **middleware local** no padrao estruturado      |
+|     `be-model-sequelize →` | Cria uma **model Sequelize**                             |
+|                 `be-app →` | Cria um arquivo **app.js** **MVC**                       |
+|                 `be-fgr →` | Cria **routes.js** no padrão **MVC**                     |
+|                  `be-gr →` | Cria **rotas** no padrão **MVC**                         |
+|                 `be-gri →` | Cria uma rota **index** **MVC**                          |
+|                `be-grpo →` | Cria uma rota **post** **MVC**                           |
+|                `be-grpu →` | Cria uma rota **put** **MVC**                            |
+|                 `be-grd →` | Cria uma rota **delete** **MVC**                         |
+|                  `be-gc →` | Cria um **controller** no modelo **MVC**                 |
+|      `be-middleware-mvc →` | Cria uma **middleware** no padrão **MVC**                |
+| `be-mvc-model-sequelize →` | Cria uma **model Sequelize** com config                  |
 
 <!-- CONTRIBUTING -->
 
