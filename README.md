@@ -4,7 +4,10 @@
 *** Request ou abra uma Issue com a tag "sugestão".
 *** Obrigado novamente! Agora vamos rodar esse projeto incrível :D
 -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> e78ac25399887498e84dc0902634f8fd95e92488
 <!--
 [![Visual Studio Marketplace Version]()]()
 [![Visual Studio Marketplace Installs]()]()
@@ -16,7 +19,11 @@
 <br />
 <p align="center">
   <a href="https://www.linkedin.com/in/lucas-lamar-531930102/">
+<<<<<<< HEAD
     <img src="imagens/belleEpoqueLogo.png" width="400px" alt="Logo">
+=======
+    <img src="https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/imagens/belleEpoqueLogo.png" width="200px" alt="Logo">
+>>>>>>> e78ac25399887498e84dc0902634f8fd95e92488
     
   </a>
 
@@ -55,7 +62,7 @@ Para instalar uma extensão você pode executar o **Command Pallete** através d
 - JavaScript (.js)
 ### Como Usar?
 
-Quando você instalar a Extensão o desenvolvimento em React Native será bem mais divertido.
+Quando você instalar a Extensão o desenvolvimento em Nodejs será bem mais divertido.
 
 ![NodeJs Snnipets](imagens/belle.gif)
 
