@@ -12,6 +12,7 @@
 		],
 		"description": " Creates a mongoDB schema. || Cria uma schema mongoDB."
 	},
+
 	"create-a-server-express-structured": {
 		"prefix": "be-server",
 		"body": [
@@ -230,7 +231,7 @@
 			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
 			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
 			"routes.put('/${1:rotas}/${3::id}', ${2:Rota}Controller.update);",
-			"routes.delete('/${1:rotas}/${3::id}', ${2:Rota}Controller.delete);",
+			"routes.delete('/${1:rotas}/${3::id}', ${2:Rota}Controller.delete);"
 		],
 		"description": " create MVC routes || Cria rotas no padrão MVC"
 	},
@@ -327,5 +328,6 @@
 			"export default $TM_FILENAME_BASE;"
 		],
 		"description": "Create a Sequelize model with config. || Cria uma model Sequelize com config"
-	}
+  }
+
 }

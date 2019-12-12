@@ -4,11 +4,8 @@
 *** Request ou abra uma Issue com a tag "sugestão".
 *** Obrigado novamente! Agora vamos rodar esse projeto incrível :D
 -->
-<<<<<<< HEAD
 
-=======
->>>>>>> e78ac25399887498e84dc0902634f8fd95e92488
-<!--
+<!-- Insignias Markeplace 
 [![Visual Studio Marketplace Version]()]()
 [![Visual Studio Marketplace Installs]()]()
 [![Visual Studio Marketplace Rating]()]()
@@ -19,12 +16,7 @@
 <br />
 <p align="center">
   <a href="https://www.linkedin.com/in/lucas-lamar-531930102/">
-<<<<<<< HEAD
     <img src="imagens/belleEpoqueLogo.png" width="400px" alt="Logo">
-=======
-    <img src="https://github.com/lucaslamar/belle-epoque-vscode-nodejs-snippets/blob/master/imagens/belleEpoqueLogo.png" width="200px" alt="Logo">
->>>>>>> e78ac25399887498e84dc0902634f8fd95e92488
-    
   </a>
 
   <h3 align="center">NodeJs Snippets</h3>
@@ -72,10 +64,10 @@ Abaixo segue a lista com todos os Snippets disponíveis e os gatilhos para cada 
 
 |                    Gatilho | Conteúdo                                                 |
 |---------------------------:|----------------------------------------------------------|
-|               `be-mongo →` | Cria uma base **mongoDB**                                |
-|              `be-server →` | Cria um **server express** estruturado                   |
+|               `be-mongo →` | Cria um schema **mongoDB**                               |
+|              `be-server →` | Cria um **server express** **estruturado**               |
 |      `be-create-promise →` | Cria uma **Promise**                                     |
-|                 `be-gar →` | Cria todas as **rotas**, Api Rest                        |
+|                 `be-gar →` | Cria todas as **rotas**, Api Rest **estruturada**        |
 |                 `be-get →` | Cria uma rota **Get**                                    |
 |                `be-mget →` | Cria uma rota **Get** estrtuturada com **middleware**    |
 |               `be-post  →` | Cria uma rota **Post**                                   |
@@ -86,10 +78,10 @@ Abaixo segue a lista com todos os Snippets disponíveis e os gatilhos para cada 
 |             `be-mdelete →` | Cria uma rota **Delete** estrtuturada com **middleware** |
 |   `be-middleware-global →` | Cria um **middlware** global                             |
 |    `be-error-middleware →` | Cria uma **middleware de error** estruturada             |
-|   `"be-middleware-local →` | Cria uma **middleware local** no padrao estruturado      |
+|   `"be-middleware-local →` | Cria uma **middleware local** no padrao **estruturado**  |
 |     `be-model-sequelize →` | Cria uma **model Sequelize**                             |
 |                 `be-app →` | Cria um arquivo **app.js** **MVC**                       |
-|                 `be-fgr →` | Cria **routes.js** no padrão **MVC**                     |
+|                 `be-fgr →` | Cria um arquivo **routes.js** no padrão **MVC**          |
 |                  `be-gr →` | Cria **rotas** no padrão **MVC**                         |
 |                 `be-gri →` | Cria uma rota **index** **MVC**                          |
 |                `be-grpo →` | Cria uma rota **post** **MVC**                           |
