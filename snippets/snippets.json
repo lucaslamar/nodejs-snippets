@@ -1,35 +1,270 @@
 {
-	"create-a-base-mongo": {
-		"prefix": "be-mongo",
-		"body": [
-			"import mongoose from 'mongoose';",
-			"",
-			"const ${1:ExemploSchema} = new mongoose.Schema({",
-			"   ",
-			"});",
-			"",
-			"export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});"
-		],
-		"description": " Creates a mongoDB schema. || Cria uma schema mongoDB."
+	
+	"import": {
+		"prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}'$0"
+  },
+  "importNoModuleName": {
+		"prefix": "imn",
+    "body": "import '${1:module}'$0"
+  },
+  "importDestructing": {
+		"prefix": "imd",
+    "body": "import { $2 } from '${1:module}'$0"
+  },
+  "importEverything": {
+		"prefix": "ime",
+    "body": "import * as ${2:alias} from '${1:module}'$0"
+  },
+  "importAs": {
+		"prefix": "ima",
+    "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}'$0"
+  },
+  "exportDefault": {
+		"prefix": "exp",
+    "body": "export default $1$0"
+  },
+  "exportDestructing": {
+		"prefix": "exd",
+    "body": "export { $2 } from '${1:module}'$0"
+  },
+  "exportAs": {
+		"prefix": "exa",
+    "body": "export { ${2:originalName} as ${3:alias} } from '${1:module}'$0"
+  },
+  "exportNamedFunction": {
+		"prefix": "enf",
+    "body": [
+			"export const ${1:functionName} = (${2:params}) => {",
+      "\t$0",
+      "}",
+      ""
+    ],
+    "description": "Export named function in ES7 syntax"
+  },
+  "exportDefaultFunction": {
+		"prefix": "edf",
+    "body": ["export default (${1:params}) => {", "\t$0", "}", ""],
+    "description": "Export default function in ES7 syntax"
+  },
+  "method": {
+		"prefix": "met",
+    "body": ["${1:methodName} = (${2:params}) => {", "\t${0}", "}", ""],
+    "description": "Creates a method inside a class in ES7 syntax"
 	},
-
-	"create-a-server-express-structured": {
+	"consoleAssert": {
+    "prefix": "cas",
+    "body": "console.assert(${1:expression}, ${2:object})",
+    "description": "If the specified expression is false, the message is written to the console along with a stack trace"
+  },
+  "consoleClear": {
+    "prefix": "ccl",
+    "body": "console.clear()",
+    "description": "Clears the console"
+  },
+  "consoleCount": {
+    "prefix": "cco",
+    "body": "console.count(${1:label})",
+    "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+  },
+  "consoleDir": {
+    "prefix": "cdi",
+    "body": "console.dir(${1:object})",
+    "description": "Prints a JavaScript representation of the specified object"
+  },
+  "consoleError": {
+    "prefix": "cer",
+    "body": "console.error(${1:object})",
+    "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+  },
+  "consoleGroup": {
+    "prefix": "cgr",
+    "body": "console.group(\"${1:label}\")",
+    "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+  },
+  "consoleGroupEnd": {
+    "prefix": "cge",
+    "body": "console.groupEnd()",
+    "description": "Closes out the corresponding console.group()."
+  },
+  "consoleLog": {
+    "prefix": "clg",
+    "body": "console.log(${1:object})",
+    "description": "Displays a message in the console"
+  },
+  "consoleTrace": {
+    "prefix": "ctr",
+    "body": "console.trace(${1:object})",
+    "description": "Prints a stack trace from the point where the method was called"
+  },
+  "consoleLogObject": {
+    "prefix": "clo",
+    "body": "console.log('${1:object}', ${1:object})",
+    "description": "Logs property with name."
+  },
+  "consoleTime": {
+    "prefix": "ctm",
+    "body": "console.time('${1:object}')",
+    "description": "Console time wrapper"
+  },
+  "consoleTimeEnd": {
+    "prefix": "cte",
+    "body": "console.timeEnd('${1:object}')",
+    "description": "Console time end wrapper"
+  },
+  "consoleWarn": {
+    "prefix": "cwa",
+    "body": "console.warn(${1:object})",
+    "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+  },
+  "consoleInfo": {
+    "prefix": "cin",
+    "body": "console.info(${1:object})",
+    "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+  },
+  "destructProps": {
+    "prefix": "cp",
+    "body": ["const { $1 } = this.props"],
+    "description": "Creates and assigns a local variable using props destructing"
+	},
+	"asyncMethod": {
+		"prefix": "amet",
+		"body": [
+			" async ${1:method}({2:params}) {",
+			"  $3",
+			"}"
+		],
+		"description": "asyncMethod"
+	},
+	"createServerExpressStructured": {
 		"prefix": "be-server",
 		"body": [
 			"const express = require('express');",
 			"",
-			"const server = express();",
+			"const ${1:server} = express();",
 			"",
-			"server.use(express.json());",
+			"${1:server}.use(express.json());",
 			"",
 			"const port = 3000;",
 			"",
-			"server.get('/', (req, res) => json({message: 'Hello World!'}));",
+			"${1:server}.get('/', (req, res) => json({message: 'Hello World!'}));",
 			"",
-			"server.listen(port);"
+			"${1:server}.listen(port);"
 		],
 		"description": "Create an express server in structured pattern. || Cria um server express estruturado."
 	},
+	"createFileRoutes.js": {
+		"prefix": "fgr",
+		"body": [
+			"import { Router } from 'express';",
+			"",
+			"const ${1:routes} = new Router();",
+			"",
+			"",
+			"export default ${1:routes};"
+		],
+		"description": " Creates routes.js || Cria routes.js"
+	},
+	"createStructuredRoute": {
+		"prefix": "egr",
+		"body": [
+			"${1:app}.${2:get}('/${3:rotas}', (req, res) => {",
+			"  res.json({});",
+			"});"
+		],
+		"description": "Create a structured Get route || Cria uma rota Get estruturada."
+	},
+	"createRouteWitdhParams": {
+		"prefix": "gerp",
+		"body": [
+			"${1:app}.${2:get}('/${3:rotas}', (req, res) => {",
+			"  res.json({});",
+			"});"
+		],
+		"description": "Create a structured route with middleware."
+	},
+
+	"createRouteWitdhParamsMiddwares": {
+		"prefix": "gerpm",
+		"body": [
+			"${1:app}.${2:get}('/${3:rotas}', ${4:middleware}, (req, res) => {",
+			"  res.json({});",
+			"});"
+		],
+		"description": "Create a structured route with middleware."
+	},
+	"create-a-route-mvc": {
+		"prefix": "be-gr",
+		"body": [
+			"${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});",
+			""
+		],
+		"description": "Create an MVC index route || Cria uma rota index MVC"
+	},
+	"create-a-route-mvc-params": {
+		"prefix": "be-grp",
+		"body": [
+			"${1:routes}.{2:get}('/${3:rotas}/${4:id}', ${5:Rota}Controller.${6:index});",
+			""
+		],
+		"description": "Create an MVC index route || Cria uma rota index MVC"
+	},
+	"create-a-route-mvc-params-middware": {
+		"prefix": "be-grpm",
+		"body": [
+			"${1:routes}.${2:get}('/${3:rotas}/${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});",
+			""
+		],
+		"description": "Create an MVC index route || Cria uma rota index MVC"
+	},
+
+	"createClass": {
+		"prefix": "be-cc",
+		"body": [
+			"class $TM_FILENAME_BASE {",
+			"",
+			"}",
+			"",
+			"export default new $TM_FILENAME_BASE();"
+		],
+		"description": "createClass"
+	},
+
+	"createClassExtends": {
+		"prefix": "be-cce",
+		"body": [
+			"class $TM_FILENAME_BASE extends ${1:Class}  {",
+			"",
+			"}",
+			"",
+			"export default new $TM_FILENAME_BASE();"
+		],
+		"description": "createClassExtends"
+	},
+
+	"config-model-sequelize": {
+		"prefix": "be-csm",
+		"body": [
+			"import Sequelize, { Model } from 'sequelize';",
+			"",
+			"class $TM_FILENAME_BASE extends Model {",
+			"  static init(sequelize) {",
+			"    super.init(",
+			"      {",
+			"       \"//campos aqui\"",
+			"      },",
+			"      { sequelize }",
+			"    );",
+			"",
+			"    return this;",
+			"  }",
+			"}",
+			"",
+			"export default $TM_FILENAME_BASE;"
+		],
+		"description": "Create a Sequelize model with config. || Cria uma model Sequelize com config"
+	},
+
 	"create-promise": {
 		"prefix": "be-create-promise",
 		"body": [
@@ -44,99 +279,7 @@
 		],
 		"description": "Create a promise || Cria uma promise ."
 	},
-	"create-routes-api-rest": {
-		"prefix": "be-gar",
-		"body": [
-			"server.get('/${1:rotas}', middleware, (req, res) => {",
-			"  res.json({});",
-			"});",
-			"",
-			"server.post('/${1:rotas}', (req, res) => {",
-			"  res.json({});",
-			"});",
-			"",
-			"server.put('/${1:rotas}/${2::id}', ${3:middleware,} (req, res) => {",
-			"  res.json({});",
-			"});",
-			"",
-			"server.delete('/${1:rotas}/${2::id}', ${3:middleware,} (req, res) => {",
-			"    res.json({});",
-			"  });"
-		],
-		"description": " Create all routes, Api Rest || Cria todas as rotas, Api Rest"
-	},
-	"create-get-structured-route": {
-		"prefix": "be-get",
-		"body": [
-			"server.get('/${1:rotas}', (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a structured Get route || Cria uma rota Get estruturada."
-	},
-	"create-get-structured-middleware-route": {
-		"prefix": "be-mget",
-		"body": [
-			"server.get('/${1:rotas}', ${2:middleware}, (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": " Creates a Get route structured with middleware. || Cria uma rota Get estrtuturada com middleware."
-	},
-	"create-a-post-structured-route": {
-		"prefix": "be-post",
-		"body": [
-			"server.post('/${1:rotas}', (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a Structured Post Route ||Cria uma rota Post estrtuturada."
-	},
-	"create-route-post-structured-middleware": {
-		"prefix": "be-mpost",
-		"body": [
-			"server.post('/${1:rotas}', ${2:middleware}, (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a Post route structured with middleware. || Cria uma rota Post estrtuturado com middleware."
-	},
-	"create-a-put-structured-route": {
-		"prefix": "be-put",
-		"body": [
-			"server.put('/${1:rotas}/${2::id}', (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a Structured Put Route || Cria uma rota Put estrtuturada."
-	},
-	"create-a-route-put-structured-middleware": {
-		"prefix": "be-mput",
-		"body": [
-			"server.put('/${1:rotas}/${2::id}', ${3:middleware}, (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a structured Put route with middleware. || Cria uma rota Put estrtuturada com middleware."
-	},
-	"create-a-route-delete-structured": {
-		"prefix": "be-delete",
-		"body": [
-			"server.delete('/${1:rotas}/${2::id}', (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a structured delete route. || Cria uma rota Delete estrtuturada."
-	},
-	"create-a-route-delete-structured-middleware": {
-		"prefix": "be-mdelete",
-		"body": [
-			"server.delete('/${1:rotas}/${2::id}', ${3:middleware}, (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a structured delete route with middleware. || Cria uma rota Delete no padrão estrtuturado com uma middleware."
-	},
+
 	"create-a-middleware-global": {
 		"prefix": "be-middleware-global",
 		"body": [
@@ -179,125 +322,7 @@
 		],
 		"description": "Creates a Sequelize model. || Cria uma model Sequelize."
 	},
-	"structure-appjs-mvc": {
-		"prefix": "be-app",
-		"body": [
-			"import express from 'express';",
-			"import routes from './routes';",
-			"",
-			"// import './database';",
-			"",
-			"class App {",
-			"  constructor() {",
-			"    this.server = express();",
-			"    this.middlewares();",
-			"    this.routes();",
-			"  }",
-			"",
-			"  middlewares() {",
-			"    this.server.use(express.json());",
-			"  }",
-			"",
-			"  routes() {",
-			"    this.server.use(routes);",
-			"  }",
-			"}",
-			"export default new App().server;"
-		],
-		"description": "Create an app.js MVC file || Cria um arquivo app.js MVC."
-	},
-	"create-file-routes.js-mvc": {
-		"prefix": "be-fgr",
-		"body": [
-			"import { Router } from 'express';",
-			"",
-			"import ${2:Rota}Controller from '';",
-			"",
-			"const routes = new Router();",
-			"",
-			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
-			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
-			"routes.put('/${1:rotas}/${3::id}', ${2:Rota}Controller.update);",
-			"routes.delete('/${1:rotas}/${3::id}', ${2:Rota}Controller.delete);",
-			"",
-			"",
-			"export default routes;"
-		],
-		"description": " Creates routes.js in the MVC pattern. || Cria routes.js no padrão MVC."
-	},
-	"create-all-routes-on-default-mvc": {
-		"prefix": "be-gr",
-		"body": [
-			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
-			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
-			"routes.put('/${1:rotas}/${3::id}', ${2:Rota}Controller.update);",
-			"routes.delete('/${1:rotas}/${3::id}', ${2:Rota}Controller.delete);"
-		],
-		"description": " create MVC routes || Cria rotas no padrão MVC"
-	},
-	"create-a-route-index-mvc": {
-		"prefix": "be-gri",
-		"body": [
-			"routes.get('/${1:rotas}', ${2:Rota}Controller.index);",
-			""
-		],
-		"description": "Create an MVC index route || Cria uma rota index MVC"
-	},
-	"create-a-route-post-mvc": {
-		"prefix": "be-grpo",
-		"body": [
-			"routes.post('/${1:rotas}', ${2:Rota}Controller.store);",
-			""
-		],
-		"description": "Create an MVC post route||Cria uma rota post MVC"
-	},
-	"create-a-route-put-mvc": {
-		"prefix": "be-grpu",
-		"body": [
-			"routes.put('/${1:rotas}/${3::id}', ${2:Rota}Controller.update);",
-			""
-		],
-		"description": "Create an MVC put route || Cria uma rota put MVC"
-	},
-	"create-a-route-delete-mvc": {
-		"prefix": "be-grd",
-		"body": [
-			"routes.delete('/${1:rotas}/${3::id}', ${2:Rota}Controller.delete);",
-			""
-		],
-		"description": " Create an MVC delete route ||Cria uma rota delete MVC"
-	},
-	"create-a-controller-in-mvc-model.": {
-		"prefix": "be-gc",
-		"body": [
-			"import Model from '${1:path}';",
-			"",
-			"class $TM_FILENAME_BASE {",
-			"    async index(req, res) {",
-			"",
-			"        return res.json({}); ",
-			"    }",
-			"    async store(req, res) {",
-			"",
-			"        return res.json({});",
-			"    }",
-			"",
-			"    async update(req, res) {",
-			"",
-			"        return res.json({});",
-			"    }",
-			"",
-			"    async delete(req, res) {",
-			"",
-			"        return res.json({});",
-			"    }",
-			"}",
-			"",
-			"export default new $TM_FILENAME_BASE();",
-			""
-		],
-		"description": "Creates a controller in the MVC model. || Cria um controller no modelo MVC."
-	},
+
 	"create-a-middleware-no-standard-mvc": {
 		"prefix": "be-middleware-mvc",
 		"body": [
@@ -306,28 +331,5 @@
 			"}"
 		],
 		"description": " Create MVC middleware || Cria uma middleware no padrão MVC"
-	},
-	"config-model-sequelize": {
-		"prefix": "be-mvc-model-sequelize",
-		"body": [
-			"import Sequelize, { Model } from 'sequelize';",
-			"",
-			"class $TM_FILENAME_BASE extends Model {",
-			"  static init(sequelize) {",
-			"    super.init(",
-			"      {",
-			"       \"//campos aqui\"",
-			"      },",
-			"      { sequelize }",
-			"    );",
-			"",
-			"    return this;",
-			"  }",
-			"}",
-			"",
-			"export default $TM_FILENAME_BASE;"
-		],
-		"description": "Create a Sequelize model with config. || Cria uma model Sequelize com config"
-  }
-
+	}
 }
