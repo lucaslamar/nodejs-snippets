@@ -24,8 +24,6 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## Começando
-
 ### Installation (Not yet possible)
 
 To install an extension you can run **Command Pallete** using the command `Ctrl + Shift + P` or` Cmd + Shift + P`, type `Install Extensions` and finally give an` Enter`, done that search by BelleEpoque and you will find the extension 
@@ -35,7 +33,7 @@ To install an extension you can run **Command Pallete** using the command `Ctrl 
 
 - JavaScript (.js)
 
-## Snippets info
+### Snippets info
 
 Every space inside `{ }` and `( )` means that this is pushed into next line :)
 `$` represent each step after `tab`.
@@ -98,7 +96,7 @@ I.E. `tsrcc`
 
 | Prefix | Method                              |
 | -----: | ----------------------------------- |
-| `cfmoo→` | `Create a Moongoose model`        s|
+| `cfmoo→` | `Create a Moongoose model`        |
 
 |                    Prefix | Method                                                 |
 |---------------------------:|----------------------------------------------------------|
@@ -114,7 +112,7 @@ I.E. `tsrcc`
 
 ## Node Components
 
-## constructor
+### constructor
 
 ```javascript
 			   constructor() {,
@@ -123,7 +121,7 @@ I.E. `tsrcc`
 
 ```
 
-## cpro
+### cpro
 
 ```javascript
 		new Promise((resolve, reject) => {,
@@ -137,7 +135,7 @@ I.E. `tsrcc`
 
 ```
 
-## cfne
+### cfne
 
 ```javascript
   const express = require('express');
@@ -154,7 +152,7 @@ I.E. `tsrcc`
 
 ```
 
-## fgr
+### fgr
 
 ```javascript
 			import { Router } from 'express';
@@ -165,7 +163,7 @@ I.E. `tsrcc`
 			export default ${1:routes};
 
 ```
-## igr
+### igr
 
 ```javascript
 			${1:app}.${2:get}('/${3:rotas}', (req, res) => {
@@ -173,7 +171,7 @@ I.E. `tsrcc`
 			});
 
 ```
-## igrm
+### igrm
 
 ```javascript
 			${1:app}.${2:get}('/${3:rotas}', ${4:middleware} , (req, res) => {
@@ -182,7 +180,7 @@ I.E. `tsrcc`
 
 ```
 
-## igrp
+### igrp
 
 ```javascript
 			${1:app}.${2:get}('/${3:rotas}/:${4:id}', (req, res) => {
@@ -191,7 +189,7 @@ I.E. `tsrcc`
 
 ```
 
-## igrpm
+### igrpm
 
 ```javascript
 			${1:app}.${2:get}('/${3:rotas}/:${5:id}', ${4:middleware}, (req, res) => {
@@ -200,7 +198,7 @@ I.E. `tsrcc`
 
 ```
 
-## fcc
+### fcc
 
 ```javascript
 			class $TM_FILENAME_BASE {
@@ -210,7 +208,7 @@ I.E. `tsrcc`
 			export default new $TM_FILENAME_BASE();
 
 ```
-## fcce
+### fcce
 
 ```javascript
 			class $TM_FILENAME_BASE extends ${1:Class}  {
@@ -221,7 +219,7 @@ I.E. `tsrcc`
 
 ```
 
-## cms
+### cms
 
 ```javascript
   		import Sequelize, { Model } from 'sequelize';
@@ -242,7 +240,7 @@ I.E. `tsrcc`
 			export default $TM_FILENAME_BASE;
 ```
 
-## cfmoo
+### cfmoo
 
 ```javascript
 	import mongoose from 'mongoose';
@@ -255,7 +253,7 @@ I.E. `tsrcc`
 
 ```
 
-## icgm
+### icgm
 
 ```javascript
 			${1:server}.use(req, res, next) => {
@@ -265,7 +263,7 @@ I.E. `tsrcc`
 
 ```
 
-## icgme
+### icgme
 
 ```javascript
 			${1:app}.use(function(err, req, res, next) {
@@ -275,7 +273,7 @@ I.E. `tsrcc`
 
 ```
 
-## cgm
+### cgm
 
 ```javascript
 			function ${1:functionName} (req, res, next) => {
@@ -285,7 +283,7 @@ I.E. `tsrcc`
 
 ```
 
-## ecgm
+### ecgm
 
 ```javascript
 			function ${1:functionName} (req, res, next) => {
