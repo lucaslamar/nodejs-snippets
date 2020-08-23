@@ -158,10 +158,10 @@
 			"}",
 			"})"
 		],
-		"description": "Create a promise || Cria uma promise ."
+		"description": "Create a promise."
 	},
 	"createServerExpressStructured": {
-		"prefix": "be-express",
+		"prefix": "cfne",
 		"body": [
 			"const express = require('express');",
 			"",
@@ -198,6 +198,15 @@
 		],
 		"description": "create an index route."
 	},
+	"createIndexRouteMiddleware": {
+		"prefix": "igr",
+	"body": [
+		"${1:app}.${2:get}('/${3:rotas}', , ${4:middleware} , (req, res) => {",
+		"  res.json({});",
+		"});"
+	],
+	"description": "create an index route with middleware."
+},
 	"createIndexRouteWitdhParams": {
 		"prefix": "igrp",
 		"body": [
@@ -259,7 +268,7 @@
 			"",
 			"export default new $TM_FILENAME_BASE();"
 		],
-		"description": "create a class"
+		"description": "create file class"
 	},
 
 	"createClassExtends": {
@@ -300,8 +309,7 @@
 	"sequelizeColum": {
 		"prefix": "ccms",
 		"body": [
-			"${1:columns}: Sequelize.${2:STRING},",
-			"$2"
+			"${1:columns}: Sequelize.${2:STRING}$3,"
 		],
 		"description": "sequelizeColum"
 	},
@@ -309,8 +317,7 @@
 	"sequelizeColumString": {
 		"prefix": "ccmss",
 		"body": [
-			"${1:column}: Sequelize.STRING,",       
-				"$1"
+			"${1:column}: Sequelize.STRING$2,"       		
 		],
 		"description": "sequelizeColumString"
 	},
@@ -318,17 +325,16 @@
 	"sequelizeColumFLOAT": {
 		"prefix": "ccmsf",
 		"body": [
-			"${1:column}: Sequelize.FLOAT,",       
-				"$1"
+			"${1:column}: Sequelize.FLOAT$2,"       		
 		],
-		"description": "sequelizeColumFLOAT"
+		"description": "sequelizeColumFLOAT$2"
 	},
 
 	"sequelizeColumINTERGER": {
 		"prefix": "ccmsi",
 		"body": [
-			"${1:column}: Sequelize.INTERGER,",       
-				"$1"
+			"${1:column}: Sequelize.INTERGER$2,"       
+				
 		],
 		"description": "sequelizeColumINTERGER"
 	},
@@ -336,13 +342,26 @@
 	"sequelizeColumENUM": {
 		"prefix": "ccmse",
 		"body": [
-			"${1:column}: Sequelize.ENUM,",       
-				"$1"
+			"${1:column}: Sequelize.ENUM$2,"       
+				
 		],
 		"description": "sequelizeColumENUM"
 	},
+	"createBaseMongo": {
+		"prefix": "cfmoo",
+		"body": [
+			"import mongoose from 'mongoose';",
+			"",
+			"const ${1:ExemploSchema} = new mongoose.Schema({",
+			"   ",
+			"});",
+			"",
+			"export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});"
+		],
+		"description": " Creates a mongoose schema."
+	},
 
-	"create-a-middleware-global": {
+	"createAMiddlewareGlobal": {
 		"prefix": "icgm",
 		"body": [
 			"${1:server}.use(req, res, next) => {",
@@ -352,7 +371,7 @@
 		],
 		"description": "Create structured global middleware."
 	},
-	"create-a-middleware-error": {
+	"createAMiddlewarError": {
 		"prefix": "icgme",
 		"body": [
 			"${1:app}.use(function(err, req, res, next) {",
@@ -362,7 +381,7 @@
 		],
 		"description": "Create structured error middleware."
 	},
-	"create-a-middleware-local": {
+	"createAmiddlewareLocal": {
 		"prefix": "cgm",
 		"body": [
 			"function ${1:functionName} (req, res, next) => {",
@@ -372,13 +391,13 @@
 		],
 		"description": "Create local middleware on structured pattern"
 	},
-	"create-a-middleware-no-standard-mvc": {
+	"createAExportMiddleware": {
 		"prefix": "ecgm",
 		"body": [
 			"export default async (req, res, next) => {",
 			"  return next();",
 			"}"
 		],
-		"description": " Create middleware"
+		"description": " Create an export middleware"
 	}
 }
