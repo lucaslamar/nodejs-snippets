@@ -98,17 +98,18 @@ I.E. `tsrcc`
 | -----: | ----------------------------------- |
 | `cfmoo→` | `Create a Moongoose model`        |
 
-|                    Prefix | Method                                                 |
-|---------------------------:|----------------------------------------------------------|
-|               `cfne →` | Creates a basic express file                              |
-|               `fcc  →` | create file of class                                   |
-|              `fgr →` | Creates routes.js               |
-|               `fcce →` | create a file of class with extends   |
-|      `gr →` | `"${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});`                                     |
-|                 `grp →` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:Rota}Controller.${6:index});`        |
-|                 `grpm →` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});`                                    |
-|                `grm →` | `${1:routes}.${2:get}('/${3:rotas}', ${4:middlewares} ${5:Rota}Controller.${6:index});`    |
-|               
+### Node.js
+
+| Prefix | Method                              																													 |
+| -----: | ----------------------------------- 																													 |
+| `cfne→`| Creates a basic express file        																													 |
+| `fcc→` | create file of class                																													 |
+| `fcce→`|create a file of class with extends  																													 |
+| `fgr→` | Creates routes.js                   																													 |
+| `gr→`  | `${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});` 											 |
+| `grp→` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:Rota}Controller.${6:index});`							 |
+| `grpm→`| `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});`|
+| `grm→` | `${1:routes}.${2:get}('/${3:rotas}', ${4:middlewares} ${5:Rota}Controller.${6:index});`       |
 
 ## Node Components
 
@@ -279,7 +280,6 @@ function ${1:functionName} (req, res, next) => {
 			
 	next();
 });
-
 ```
 
 <!-- CONTRIBUTING -->
