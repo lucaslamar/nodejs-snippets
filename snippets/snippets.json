@@ -1,5 +1,4 @@
 {
-	
 	"import": {
 		"prefix": "imp",
     "body": "import ${2:moduleName} from '${1:module}'$0"
@@ -127,6 +126,7 @@
     "body": ["const { $1 } = this.props"],
     "description": "Creates and assigns a local variable using props destructing"
 	},
+
 	"asyncMethod": {
 		"prefix": "amet",
 		"body": [
@@ -134,137 +134,8 @@
 			"  $3",
 			"}"
 		],
-		"description": "asyncMethod"
+		"description": "Creates an async method"
 	},
-	"createServerExpressStructured": {
-		"prefix": "be-server",
-		"body": [
-			"const express = require('express');",
-			"",
-			"const ${1:server} = express();",
-			"",
-			"${1:server}.use(express.json());",
-			"",
-			"const port = 3000;",
-			"",
-			"${1:server}.get('/', (req, res) => json({message: 'Hello World!'}));",
-			"",
-			"${1:server}.listen(port);"
-		],
-		"description": "Create an express server in structured pattern. || Cria um server express estruturado."
-	},
-	"createFileRoutes.js": {
-		"prefix": "fgr",
-		"body": [
-			"import { Router } from 'express';",
-			"",
-			"const ${1:routes} = new Router();",
-			"",
-			"",
-			"export default ${1:routes};"
-		],
-		"description": " Creates routes.js || Cria routes.js"
-	},
-	"createStructuredRoute": {
-		"prefix": "egr",
-		"body": [
-			"${1:app}.${2:get}('/${3:rotas}', (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a structured Get route || Cria uma rota Get estruturada."
-	},
-	"createRouteWitdhParams": {
-		"prefix": "gerp",
-		"body": [
-			"${1:app}.${2:get}('/${3:rotas}', (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a structured route with middleware."
-	},
-
-	"createRouteWitdhParamsMiddwares": {
-		"prefix": "gerpm",
-		"body": [
-			"${1:app}.${2:get}('/${3:rotas}', ${4:middleware}, (req, res) => {",
-			"  res.json({});",
-			"});"
-		],
-		"description": "Create a structured route with middleware."
-	},
-	"create-a-route-mvc": {
-		"prefix": "be-gr",
-		"body": [
-			"${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});",
-			""
-		],
-		"description": "Create an MVC index route || Cria uma rota index MVC"
-	},
-	"create-a-route-mvc-params": {
-		"prefix": "be-grp",
-		"body": [
-			"${1:routes}.{2:get}('/${3:rotas}/${4:id}', ${5:Rota}Controller.${6:index});",
-			""
-		],
-		"description": "Create an MVC index route || Cria uma rota index MVC"
-	},
-	"create-a-route-mvc-params-middware": {
-		"prefix": "be-grpm",
-		"body": [
-			"${1:routes}.${2:get}('/${3:rotas}/${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});",
-			""
-		],
-		"description": "Create an MVC index route || Cria uma rota index MVC"
-	},
-
-	"createClass": {
-		"prefix": "be-cc",
-		"body": [
-			"class $TM_FILENAME_BASE {",
-			"",
-			"}",
-			"",
-			"export default new $TM_FILENAME_BASE();"
-		],
-		"description": "createClass"
-	},
-
-	"createClassExtends": {
-		"prefix": "be-cce",
-		"body": [
-			"class $TM_FILENAME_BASE extends ${1:Class}  {",
-			"",
-			"}",
-			"",
-			"export default new $TM_FILENAME_BASE();"
-		],
-		"description": "createClassExtends"
-	},
-
-	"config-model-sequelize": {
-		"prefix": "be-csm",
-		"body": [
-			"import Sequelize, { Model } from 'sequelize';",
-			"",
-			"class $TM_FILENAME_BASE extends Model {",
-			"  static init(sequelize) {",
-			"    super.init(",
-			"      {",
-			"       \"//campos aqui\"",
-			"      },",
-			"      { sequelize }",
-			"    );",
-			"",
-			"    return this;",
-			"  }",
-			"}",
-			"",
-			"export default $TM_FILENAME_BASE;"
-		],
-		"description": "Create a Sequelize model with config. || Cria uma model Sequelize com config"
-	},
-
 	"create-promise": {
 		"prefix": "be-create-promise",
 		"body": [
@@ -279,16 +150,143 @@
 		],
 		"description": "Create a promise || Cria uma promise ."
 	},
+	"createServerExpressStructured": {
+		"prefix": "be-express",
+		"body": [
+			"const express = require('express');",
+			"",
+			"const ${1:server} = express();",
+			"",
+			"${1:server}.use(express.json());",
+			"",
+			"const port = 3000;",
+			"",
+			"${1:server}.get('/', (req, res) => json({message: 'Hello World!'}));",
+			"",
+			"${1:server}.listen(port);"
+		],
+		"description": "Creates a basic express file"
+	},
+	"createFileRoutes.js": {
+		"prefix": "fgr",
+		"body": [
+			"import { Router } from 'express';",
+			"",
+			"const ${1:routes} = new Router();",
+			"",
+			"",
+			"export default ${1:routes};"
+		],
+		"description": "Creates routes.js"
+	},
+	"createIndexRoute": {
+		"prefix": "igr",
+		"body": [
+			"${1:app}.${2:get}('/${3:rotas}', (req, res) => {",
+			"  res.json({});",
+			"});"
+		],
+		"description": "create an index route."
+	},
+	"createIndexRouteWitdhParams": {
+		"prefix": "irp",
+		"body": [
+			"${1:app}.${2:get}('/${3:rotas}', (req, res) => {",
+			"  res.json({});",
+			"});"
+		],
+		"description": "creates an index parameterized route."
+	},
 
+	"createIndexRouteWitdhParamsMiddwares": {
+		"prefix": "irpm",
+		"body": [
+			"${1:app}.${2:get}('/${3:rotas}', ${4:middleware}, (req, res) => {",
+			"  res.json({});",
+			"});"
+		],
+		"description": "create an index route with parameter and middleware"
+	},
+	"createRoute": {
+		"prefix": "gr",
+		"body": [
+			"${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});",
+			""
+		],
+		"description": "creates route"
+	},
+	"createRouteParams": {
+		"prefix": "grp",
+		"body": [
+			"${1:routes}.{2:get}('/${3:rotas}/${4:id}', ${5:Rota}Controller.${6:index});",
+			""
+		],
+		"description": "create a route with parameter"
+	},
+	"createRouteParamsMiddware": {
+		"prefix": "grpm",
+		"body": [
+			"${1:routes}.${2:get}('/${3:rotas}/${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});",
+			""
+		],
+		"description": "create a route with parameter and middleware"
+	},
+
+	"createClass": {
+		"prefix": "fcc",
+		"body": [
+			"class $TM_FILENAME_BASE {",
+			"",
+			"}",
+			"",
+			"export default new $TM_FILENAME_BASE();"
+		],
+		"description": "create a class"
+	},
+
+	"createClassExtends": {
+		"prefix": "fcce",
+		"body": [
+			"class $TM_FILENAME_BASE extends ${1:Class}  {",
+			"",
+			"}",
+			"",
+			"export default new $TM_FILENAME_BASE();"
+		],
+		"description": "create a class with extends"
+	},
+
+	"configModelSequelize": {
+		"prefix": "be-cms",
+		"body": [
+			"import Sequelize, { Model } from 'sequelize';",
+			"",
+			"class $TM_FILENAME_BASE extends Model {",
+			"  static init(sequelize) {",
+			"    super.init(",
+			"      {",
+			"       $1",
+			"      },",
+			"      { sequelize }",
+			"    );",
+			"",
+			"    return this;",
+			"  }",
+			"}",
+			"",
+			"export default $TM_FILENAME_BASE;"
+		],
+		"description": "Create a Sequelize model with config."
+	},
 	"create-a-middleware-global": {
 		"prefix": "be-middleware-global",
 		"body": [
-			"server.use(req, res, next) => {",
+			"${1:server}.use(req, res, next) => {",
 			"",
 			"next();",
 			"});"
 		],
-		"description": "Create structured global middleware. || Cria um middlware global"
+		"description": "Create structured global middleware."
 	},
 	"create-a-middleware-error": {
 		"prefix": "be-error-middleware",
@@ -298,7 +296,7 @@
 			"  res.status(500).send('Algo Errado :/!');",
 			"});"
 		],
-		"description": "Create structured error middleware. || Cria uma middleware de error estruturada"
+		"description": "Create structured error middleware."
 	},
 	"create-a-middleware-local": {
 		"prefix": "be-middleware-local",
@@ -308,7 +306,7 @@
 			"next();",
 			"});"
 		],
-		"description": "Create local middleware on structured pattern || Cria uma middleware local no padrao estruturado."
+		"description": "Create local middleware on structured pattern"
 	},
 	"create-a-model-sequelize": {
 		"prefix": "be-model-sequelize",
@@ -320,16 +318,16 @@
 			"  return $TM_FILENAME_BASE;",
 			"}"
 		],
-		"description": "Creates a Sequelize model. || Cria uma model Sequelize."
+		"description": "Creates a Sequelize model with module.exports."
 	},
 
 	"create-a-middleware-no-standard-mvc": {
-		"prefix": "be-middleware-mvc",
+		"prefix": "be-middleware",
 		"body": [
 			"export default async (req, res, next) => {",
 			"  return next();",
 			"}"
 		],
-		"description": " Create MVC middleware || Cria uma middleware no padrão MVC"
+		"description": " Create middleware"
 	}
 }
