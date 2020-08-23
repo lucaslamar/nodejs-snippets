@@ -130,7 +130,7 @@
 	"asyncMethod": {
 		"prefix": "amet",
 		"body": [
-			" async ${1:method}({2:params}) {",
+			" async ${1:method}(${2:params}) {",
 			"  $3",
 			"}"
 		],
@@ -173,7 +173,7 @@
 			"import { Router } from 'express';",
 			"",
 			"const ${1:routes} = new Router();",
-			"",
+			"$2",
 			"",
 			"export default ${1:routes};"
 		],
@@ -189,9 +189,9 @@
 		"description": "create an index route."
 	},
 	"createIndexRouteWitdhParams": {
-		"prefix": "irp",
+		"prefix": "igrp",
 		"body": [
-			"${1:app}.${2:get}('/${3:rotas}', (req, res) => {",
+			"${1:app}.${2:get}('/${3:rotas}/:${4:id}', (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
@@ -199,9 +199,9 @@
 	},
 
 	"createIndexRouteWitdhParamsMiddwares": {
-		"prefix": "irpm",
+		"prefix": "igrpm",
 		"body": [
-			"${1:app}.${2:get}('/${3:rotas}', ${4:middleware}, (req, res) => {",
+			"${1:app}.${2:get}('/${3:rotas}/:${5:id}', ${4:middleware}, (req, res) => {",
 			"  res.json({});",
 			"});"
 		],
@@ -218,7 +218,7 @@
 	"createRouteParams": {
 		"prefix": "grp",
 		"body": [
-			"${1:routes}.{2:get}('/${3:rotas}/${4:id}', ${5:Rota}Controller.${6:index});",
+			"${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:Rota}Controller.${6:index});",
 			""
 		],
 		"description": "create a route with parameter"
@@ -226,7 +226,7 @@
 	"createRouteParamsMiddware": {
 		"prefix": "grpm",
 		"body": [
-			"${1:routes}.${2:get}('/${3:rotas}/${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});",
+			"${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});",
 			""
 		],
 		"description": "create a route with parameter and middleware"
@@ -236,7 +236,7 @@
 		"prefix": "fcc",
 		"body": [
 			"class $TM_FILENAME_BASE {",
-			"",
+			"$1",
 			"}",
 			"",
 			"export default new $TM_FILENAME_BASE();"
@@ -248,7 +248,7 @@
 		"prefix": "fcce",
 		"body": [
 			"class $TM_FILENAME_BASE extends ${1:Class}  {",
-			"",
+			"$2",
 			"}",
 			"",
 			"export default new $TM_FILENAME_BASE();"
@@ -291,7 +291,7 @@
 	"create-a-middleware-error": {
 		"prefix": "be-error-middleware",
 		"body": [
-			"app.use(function(err, req, res, next) {",
+			"${1:app}.use(function(err, req, res, next) {",
 			"  console.error(err.stack);",
 			"  res.status(500).send('Algo Errado :/!');",
 			"});"
