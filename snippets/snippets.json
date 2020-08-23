@@ -127,6 +127,16 @@
     "description": "Creates and assigns a local variable using props destructing"
 	},
 
+	"constructor": {
+		"prefix": "constructor",
+		"body": [
+			"   constructor() {",
+			"        $1",
+			"    }"
+		],
+		"description": "constructor"
+	},
+
 	"asyncMethod": {
 		"prefix": "amet",
 		"body": [
@@ -137,7 +147,7 @@
 		"description": "Creates an async method"
 	},
 	"create-promise": {
-		"prefix": "be-create-promise",
+		"prefix": "cpro",
 		"body": [
 			"new Promise((resolve, reject) => {",
 			"  let condition = false;",
@@ -257,7 +267,7 @@
 	},
 
 	"configModelSequelize": {
-		"prefix": "be-cms",
+		"prefix": "cms",
 		"body": [
 			"import Sequelize, { Model } from 'sequelize';",
 			"",
@@ -278,8 +288,54 @@
 		],
 		"description": "Create a Sequelize model with config."
 	},
+	
+	"sequelizeColum": {
+		"prefix": "ccms",
+		"body": [
+			"${1:columns}: Sequelize.${2:STRING},",
+			"$2"
+		],
+		"description": "sequelizeColum"
+	},
+
+	"sequelizeColumString": {
+		"prefix": "ccmss",
+		"body": [
+			"${1:column}: Sequelize.STRING,",       
+				"$1"
+		],
+		"description": "sequelizeColumString"
+	},
+
+	"sequelizeColumFLOAT": {
+		"prefix": "ccmsf",
+		"body": [
+			"${1:column}: Sequelize.FLOAT,",       
+				"$1"
+		],
+		"description": "sequelizeColumFLOAT"
+	},
+
+	"sequelizeColumINTERGER": {
+		"prefix": "ccmsi",
+		"body": [
+			"${1:column}: Sequelize.INTERGER,",       
+				"$1"
+		],
+		"description": "sequelizeColumINTERGER"
+	},
+
+	"sequelizeColumENUM": {
+		"prefix": "ccmse",
+		"body": [
+			"${1:column}: Sequelize.ENUM,",       
+				"$1"
+		],
+		"description": "sequelizeColumENUM"
+	},
+
 	"create-a-middleware-global": {
-		"prefix": "be-middleware-global",
+		"prefix": "icgm",
 		"body": [
 			"${1:server}.use(req, res, next) => {",
 			"",
@@ -289,7 +345,7 @@
 		"description": "Create structured global middleware."
 	},
 	"create-a-middleware-error": {
-		"prefix": "be-error-middleware",
+		"prefix": "icgme",
 		"body": [
 			"${1:app}.use(function(err, req, res, next) {",
 			"  console.error(err.stack);",
@@ -299,7 +355,7 @@
 		"description": "Create structured error middleware."
 	},
 	"create-a-middleware-local": {
-		"prefix": "be-middleware-local",
+		"prefix": "cgm",
 		"body": [
 			"function ${1:functionName} (req, res, next) => {",
 			"",
@@ -308,21 +364,8 @@
 		],
 		"description": "Create local middleware on structured pattern"
 	},
-	"create-a-model-sequelize": {
-		"prefix": "be-model-sequelize",
-		"body": [
-			"module.exports = (sequelize, DataTypes) => {",
-			"  const $TM_FILENAME_BASE = sequelize.define('$TM_FILENAME_BASE', {",
-			"  });",
-			"",
-			"  return $TM_FILENAME_BASE;",
-			"}"
-		],
-		"description": "Creates a Sequelize model with module.exports."
-	},
-
 	"create-a-middleware-no-standard-mvc": {
-		"prefix": "be-middleware",
+		"prefix": "ecgm",
 		"body": [
 			"export default async (req, res, next) => {",
 			"  return next();",
