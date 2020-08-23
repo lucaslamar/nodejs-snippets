@@ -101,13 +101,13 @@ I.E. `tsrcc`
 |                    Prefix | Method                                                 |
 |---------------------------:|----------------------------------------------------------|
 |               `cfne →` | Creates a basic express file                              |
+|               `fcc  →` | create file of class                                   |
 |              `fgr →` | Creates routes.js               |
+|               `fcce →` | create a file of class with extends   |
 |      `gr →` | `"${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});`                                     |
 |                 `grp →` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:Rota}Controller.${6:index});`        |
 |                 `grpm →` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});`                                    |
 |                `grm →` | `${1:routes}.${2:get}('/${3:rotas}', ${4:middlewares} ${5:Rota}Controller.${6:index});`    |
-|               `fcc  →` | create file class                                   |
-|               `fcce →` |    |
 |               
 
 ## Node Components
@@ -115,181 +115,170 @@ I.E. `tsrcc`
 ### constructor
 
 ```javascript
-			   constructor() {,
-			        $1
-			    }
+constructor() {
+	$1
+	}
 
 ```
 
 ### cpro
 
 ```javascript
-		new Promise((resolve, reject) => {,
-			  let condition = false;
-			  if(condition) {
-			    resolve('data')
-			  } else {
-			    reject('error')
-			}
-			})
-
+new Promise((resolve, reject) => {,
+	let condition = false;
+	if(condition) {
+		resolve('data')
+			} else {
+			  reject('error')
+		}
+		})
 ```
 
 ### cfne
 
 ```javascript
-  const express = require('express');
+const express = require('express');
   
-	const ${1:server} = express();,
+const ${1:server} = express();,
       
-      ${1:server}.use(express.json());,
+${1:server}.use(express.json());,
 
-      const port = 3000;,
+const port = 3000;,
       
-			${1:server}.get('/', (req, res) => json({message: 'Hello World!'}));,
+${1:server}.get('/', (req, res) => json({message: 'Hello World!'}));,
       
-      ${1:server}.listen(port);
-
+${1:server}.listen(port);
 ```
 
 ### fgr
 
 ```javascript
-			import { Router } from 'express';
+import { Router } from 'express';
 			
-			const ${1:routes} = new Router();
-			$2
+const ${1:routes} = new Router();
+	$2
 			
-			export default ${1:routes};
-
+export default ${1:routes};
 ```
 ### igr
 
 ```javascript
-			${1:app}.${2:get}('/${3:rotas}', (req, res) => {
-			  res.json({});
-			});
-
+${1:app}.${2:get}('/${3:rotas}', (req, res) => {
+	res.json({});
+	});
 ```
 ### igrm
 
 ```javascript
-			${1:app}.${2:get}('/${3:rotas}', ${4:middleware} , (req, res) => {
-			  res.json({});
-			});
-
+${1:app}.${2:get}('/${3:rotas}', ${4:middleware} , (req, res) => {
+	res.json({});
+		});
 ```
 
 ### igrp
 
 ```javascript
-			${1:app}.${2:get}('/${3:rotas}/:${4:id}', (req, res) => {
-			  res.json({});
-			});
+${1:app}.${2:get}('/${3:rotas}/:${4:id}', (req, res) => {
+	res.json({});
+		});
 
 ```
-
 ### igrpm
 
 ```javascript
-			${1:app}.${2:get}('/${3:rotas}/:${5:id}', ${4:middleware}, (req, res) => {
-			  res.json({});
-			});
+${1:app}.${2:get}('/${3:rotas}/:${5:id}', ${4:middleware}, (req, res) => {
+	res.json({});
+		});
 
 ```
-
 ### fcc
 
 ```javascript
-			class $TM_FILENAME_BASE {
-			$1
-			}
+class $TM_FILENAME_BASE {
+	$1
+	}
 			
-			export default new $TM_FILENAME_BASE();
+export default new $TM_FILENAME_BASE();
 
 ```
 ### fcce
 
 ```javascript
-			class $TM_FILENAME_BASE extends ${1:Class}  {
-			$2
-			}
+class $TM_FILENAME_BASE extends ${1:Class}  {
+	$2
+	}
 			
-			export default new $TM_FILENAME_BASE();
-
+	export default new $TM_FILENAME_BASE();
 ```
 
 ### cms
 
 ```javascript
-  		import Sequelize, { Model } from 'sequelize';
-			,
-			class $TM_FILENAME_BASE extends Model {
-			  static init(sequelize) {,
-			    super.init(
-			      {
-			       $1
-			      },
-			      { sequelize }
-			    );
-			,
-			    return this;
-			  }
-			}
+import Sequelize, { Model } from 'sequelize';
 			
-			export default $TM_FILENAME_BASE;
+class $TM_FILENAME_BASE extends Model {
+	static init(sequelize) {
+		super.init(
+			{
+			  $1
+			},
+			{ sequelize }
+		);
+			
+		return this;
+			}
+	}
+			
+	export default $TM_FILENAME_BASE;
 ```
 
 ### cfmoo
 
 ```javascript
-	import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 			
-			const ${1:ExemploSchema} = new mongoose.Schema({
+const ${1:ExemploSchema} = new mongoose.Schema({
 			   
-			});
+	});
 			
-			export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});
-
+export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});
 ```
 
 ### icgm
 
 ```javascript
-			${1:server}.use(req, res, next) => {
+${1:server}.use(req, res, next) => {
 			
-			next();
-			});
-
+	next();
+});
 ```
 
 ### icgme
 
 ```javascript
-			${1:app}.use(function(err, req, res, next) {
-			  console.error(err.stack);
-			  res.status(500).send('Algo Errado :/!');
-			});
-
+${1:app}.use(function(err, req, res, next) {
+	console.error(err.stack);
+	res.status(500).send('Algo Errado :/!');
+});
 ```
 
 ### cgm
 
 ```javascript
-			function ${1:functionName} (req, res, next) => {
+function ${1:functionName} (req, res, next) => {
 			
-			next();
-			});
+	next();
+});
 
 ```
 
 ### ecgm
 
 ```javascript
-			function ${1:functionName} (req, res, next) => {
+function ${1:functionName} (req, res, next) => {
 			
-			next();
-			});
+	next();
+});
 
 ```
 
