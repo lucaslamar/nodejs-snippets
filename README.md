@@ -58,9 +58,20 @@ I.E. `tsrcc`
 |  `exa→` | `export { originalName as aliasName} from 'module'` |
 |  `enf→` | `export const functionName = (params) => { }`       |
 |  `edf→` | `export default (params) => { }`                    |
-|  `met→` | `methodName = (params) => { }`                      |
-|  `amet→` | `async method(params) {}`                      |
-|  `constructor` | `constructor() {}`                      |
+|  `fre>` | `array.forEach(currentItem => {})`                  |
+|  `fof→` | `for(const item of object) {}`                      |
+|  `fin→` | `for(const item in object) {}`                      |
+|  `anfn→`| `(params) => {}`                      							|
+|  `nfn→` | `const add = (params) => {}`                        |
+|  `dar→` | `const [first, second] = [1,2]`                     |
+|  `dob→` | `const {rename} = fs`                      					|
+|  `sti→` | `setInterval(() => {});`                      			|
+|  `sto→` 	| `setTimeout(() => {});`                      			|
+|  `prom→` 	| `return new Promise((resolve, reject) => {});`    |
+|  `thenc→`	| `.then((res) => {}).catch((err) => {});`          |
+|  `met→` 	| `methodName = (params) => { }`                    |
+|  `amet→`	| `async method(params) {}`                      		|
+|  `constructor` | `constructor() {}`                      			|
 
 ### Console
 
@@ -83,20 +94,20 @@ I.E. `tsrcc`
 
 ### Sequelize
 
-| Prefix | Method                              |
-| -----: | ----------------------------------- |
-| `cms→` | `Create a Sequelize model`          |
-| `ccms→` | `${1:columns}: Sequelize.${2:STRING}$3,`|
-| `ccmss→` | `${1:column}: Sequelize.STRING$2`            |
-| `ccmsi→` | `${1:column}: Sequelize.INTERGER$2`            |
-| `ccmsf→` | `${1:column}: Sequelize.FLOAT$2`            |
-| `ccmse→` | `${1:column}: Sequelize.ENUM$2`            |
+| Prefix   | Method                                  |
+| -----:   | -----------------------------------     |
+| `cms→`   | `Create a Sequelize model`              |
+| `ccms→`	 | `${1:columns}: Sequelize.${2:STRING}$3,`|
+| `ccmss→` | `${1:column}: Sequelize.STRING$2`       |
+| `ccmsi→` | `${1:column}: Sequelize.INTERGER$2`     |
+| `ccmsf→` | `${1:column}: Sequelize.FLOAT$2`        |
+| `ccmse→` | `${1:column}: Sequelize.ENUM$2`         	|
 
 ### MongoDB
 
-| Prefix | Method                              |
-| -----: | ----------------------------------- |
-| `cfmoo→` | `Create a Moongoose model`        |
+| Prefix   | Method                              |
+| -----:   | ----------------------------------- |
+| `cfmoo→` | `Create a Moongoose model`        	 |
 
 ### Node.js
 
@@ -104,7 +115,7 @@ I.E. `tsrcc`
 | -----: | ----------------------------------- 																													 |
 | `cfne→`| Creates a basic express file        																													 |
 | `fcc→` | create file of class                																													 |
-| `fcce→`|create a file of class with extends  																													 |
+| `fcce→`| create a file of class with extends  																												 |
 | `fgr→` | Creates routes.js                   																													 |
 | `gr→`  | `${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});` 											 |
 | `grp→` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:Rota}Controller.${6:index});`							 |
@@ -294,12 +305,12 @@ function ${1:functionName} (req, res, next) => {
 
 <!-- LICENSE -->
 
-## Licença
+## license
 
 Distributed under the MIT license. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 
-## Contato
+## Contact
 
 Lucas Lamar - [Github](https://github.com/lucaslamar) - **lucass.lamar@gmail.com**
