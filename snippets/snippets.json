@@ -389,12 +389,12 @@
     ],
     "description": "sequelizeColumFLOAT$2"
   },
-  "sequelizeColumINTERGER": {
+  "sequelizeColumINTEGER": {
     "prefix": "ccmsi",
     "body": [
-      "${1:column}: Sequelize.INTERGER$2,"
+      "${1:column}: Sequelize.INTEGER$2,"
     ],
-    "description": "sequelizeColumINTERGER"
+    "description": "sequelizeColumINTEGER"
   },
   "sequelizeColumENUM": {
     "prefix": "ccmse",
