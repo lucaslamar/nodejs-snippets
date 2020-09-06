@@ -303,7 +303,7 @@
   "createRouteMiddlewares": {
     "prefix": "grm",
     "body": [
-      "${1:routes}.${2:get}('/${3:rotas}', ${4:middlewares} ${5:Rota}Controller.${6:index});",
+      "${1:routes}.${2:get}('/${3:rotas}', ${4:middlewares}, ${5:Rota}Controller.${6:index});",
       ""
     ],
     "description": "creates route with Middlewares"
