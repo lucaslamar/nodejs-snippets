@@ -2,7 +2,7 @@
   "TSInterface": {
   "prefix": "interface",
   "body": [
-    "interface '${1:Interface} {",
+    "interface ${1:Interface} {",
     "  label: string;",
     "}  "
   ],
