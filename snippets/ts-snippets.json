@@ -7,5 +7,24 @@
     "}  "
   ],
   "description": "TSInterface"
+  },
+  "exportIterface": {
+    "prefix": "exportInterface",
+    "body": [
+      "export interface ${1:Interface} {",
+      "  label: value;",
+      "}"
+    ],
+    "description": "exportInterface"
+  },
+  "exportInterfaceM": {
+    "prefix": "exportInterfaceM",
+    "body": [
+      "export interface ${1:IterfaceMethod} {",
+      "  ${1:method}(paramether): ${1:Promise}<${1:void}>;",
+      "}"
+    ],
+    "description": "exportInterfaceM"
   }
+  
 }

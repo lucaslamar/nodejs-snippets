@@ -122,7 +122,9 @@ I.E. `tsrcc`
 | `grpm→`| `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});`|
 | `grm→` | `${1:routes}.${2:get}('/${3:rotas}', ${4:middlewares} ${5:Rota}Controller.${6:index});`       |
 
-## Node Components
+# Node Components
+
+## JavaScript
 
 ### constructor
 
@@ -292,6 +294,31 @@ function ${1:functionName} (req, res, next) => {
 	next();
 });
 ```
+
+## TypeScript
+
+### interface
+```javascript
+ interface Interface {
+  label: string;
+}   
+```
+### expotInterface
+```TS
+export interface Interface {
+  label: value;
+}
+ 
+ ```
+### exportInterfaceM
+```TS 
+export interface IterfaceMethod {
+  IterfaceMethod(paramether): IterfaceMethod<IterfaceMethod>;
+}
+
+```
+###
+```TS ```
 
 <!-- CONTRIBUTING -->
 
