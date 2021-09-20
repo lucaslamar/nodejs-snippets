@@ -304,7 +304,7 @@
     "description": "create an index route."
   },
   "createIndexRouteMiddleware": {
-    "prefix": "igr",
+    "prefix": "igrm",
     "body": [
       "${1:app}.${2:get}('/${3:rotas}', [${4:middleware}] , (request, response) => {",
       "  response.json({});",

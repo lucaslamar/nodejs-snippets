@@ -25,6 +25,41 @@
       "}"
     ],
     "description": "exportInterfaceM"
+  },
+  "createIndexRoute": {
+    "prefix": "tigr",
+    "body": [
+      "${1:app}.${2:get}('/${3:rotas}', (request: Request, response: Response) => {",
+      "  response.json({});",
+      "});"
+    ],
+    "description": "create an index route."
+  },
+  "createIndexRouteMiddleware": {
+    "prefix": "tigrm",
+    "body": [
+      "${1:app}.${2:get}('/${3:rotas}', [${4:middleware}] , (request: Request, response: Response) => {",
+      "  response.json({});",
+      "});"
+    ],
+    "description": "create an index route with middleware."
+  },
+  "createIndexRouteWitdhParams": {
+    "prefix": "tigrp",
+    "body": [
+      "${1:app}.${2:get}('/${3:rotas}/:${4:id}', (request: Request, response: Response) => {",
+      "  response.json({});",
+      "});"
+    ],
+    "description": "creates an index parameterized route."
+  },
+  "createIndexRouteWitdhParamsMiddwares": {
+    "prefix": "tigrpm",
+    "body": [
+      "${1:app}.${2:get}('/${3:rotas}/:${5:id}', [${4:middleware}], (request: Request, response: Response) => {",
+      "  response.json({});",
+      "});"
+    ],
+    "description": "create an index route with parameter and middleware"
   }
-  
 }

@@ -317,8 +317,32 @@ export interface IterfaceMethod {
 }
 
 ```
-###
-```TS ```
+
+### tigr
+```TS
+app.get('/rotas', (request: Request, response: Response) => {
+  response.json({});
+});
+ ```
+### tigrp
+```TS
+app.get('/rotas/:id', (request: Request, response: Response) => {
+  response.json({});
+});
+ ```
+### tigrpm
+```TS
+app.get('/rotas/:id', [middleware], (request: Request, response: Response) => {
+  response.json({});
+}); 
+```
+### tigrm
+```TS
+app.get('/rotas', [middleware] , (request: Request, response: Response) => {
+  response.json({});
+});
+}); 
+```
 
 <!-- CONTRIBUTING -->
 
