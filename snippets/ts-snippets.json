@@ -61,5 +61,15 @@
       "});"
     ],
     "description": "create an index route with parameter and middleware"
+  },
+  "enum": {
+    "prefix": "enum",
+    "body": [
+      "export enum ${1:Enum} {",
+      "  EXAMPLE = 'example',",
+      "}",
+      ""
+    ],
+    "description": "enum"
   }
 }
