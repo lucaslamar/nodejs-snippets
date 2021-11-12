@@ -114,7 +114,7 @@ I.E. `tsrcc`
 | Prefix | Method                                                            |
 | -----: | -----------------------------------                               |
 | `cfne→`| Creates a basic express file                                      |
-| `cfne→`| Creates a basic express file TS                                      |
+| `tcfne→`| Creates a basic express file TS                                      |
 | `fcc→` | create file of class                                              |
 | `fcce→`| create a file of class with extends                               |
 | `fgr→` | Creates routes.js                                                 |
