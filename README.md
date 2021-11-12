@@ -32,6 +32,7 @@ To install an extension you can run **Command Pallete** using the command `Ctrl 
 ### Supported languages (file extensions)
 
 - JavaScript (.js)
+- TypeScript (.ts)
 
 ### Snippets info
 
@@ -357,7 +358,7 @@ app.get('/rotas', [middleware] , (request: Request, response: Response) => {
 
 1. Make the _fork_ of the project (<https://github.com/lucaslamar/es6-nodejs-snippets/fork>)
 2. Create a _branch_ for your modification (`git checkout -b feature/fooBar`)
-3. Make _commit_ (`git commit -m '[FEAT] - Estrutura inicial do projeto'`)
+3. Make _commit_ (`git commit -m 'feat: estrutura inicial do projeto'`)
 4. _Push_ (`git push origin feature/fooBar`)
 5. Create a new _Pull Request_
 
