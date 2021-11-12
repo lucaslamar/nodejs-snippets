@@ -26,7 +26,7 @@
 
 ### Installation (Not yet possible)
 
-To install an extension you can run **Command Pallete** using the command `Ctrl + Shift + P` or` Cmd + Shift + P`, type `Install Extensions` and finally give an` Enter`, done that search by BelleEpoque and you will find the extension 
+To install an extension you can run **Command Pallete** using the command `Ctrl + Shift + P` or` Cmd + Shift + P`, type `Install Extensions` and finally give an`Enter`, done that search by BelleEpoque and you will find the extension
 **es6-nodejs-snippets**.
 
 ### Supported languages (file extensions)
@@ -61,17 +61,17 @@ I.E. `tsrcc`
 |  `fre>` | `array.forEach(currentItem => {})`                  |
 |  `fof→` | `for(const item of object) {}`                      |
 |  `fin→` | `for(const item in object) {}`                      |
-|  `anfn→`| `(params) => {}`                      							|
+|  `anfn→`| `(params) => {}`                             |
 |  `nfn→` | `const add = (params) => {}`                        |
 |  `dar→` | `const [first, second] = [1,2]`                     |
-|  `dob→` | `const {rename} = fs`                      					|
-|  `sti→` | `setInterval(() => {});`                      			|
-|  `sto→` 	| `setTimeout(() => {});`                      			|
-|  `prom→` 	| `return new Promise((resolve, reject) => {});`    |
-|  `thenc→`	| `.then((res) => {}).catch((err) => {});`          |
-|  `met→` 	| `methodName = (params) => { }`                    |
-|  `amet→`	| `async method(params) {}`                      		|
-|  `constructor` | `constructor() {}`                      			|
+|  `dob→` | `const {rename} = fs`                           |
+|  `sti→` | `setInterval(() => {});`                         |
+|  `sto→`  | `setTimeout(() => {});`                         |
+|  `prom→`  | `return new Promise((resolve, reject) => {});`    |
+|  `thenc→` | `.then((res) => {}).catch((err) => {});`          |
+|  `met→`  | `methodName = (params) => { }`                    |
+|  `amet→` | `async method(params) {}`                        |
+|  `constructor` | `constructor() {}`                         |
 
 ### Console
 
@@ -97,28 +97,29 @@ I.E. `tsrcc`
 | Prefix   | Method                                  |
 | -----:   | -----------------------------------     |
 | `cms→`   | `Create a Sequelize model`              |
-| `ccms→`	 | `${1:columns}: Sequelize.${2:STRING}$3,`|
+| `ccms→`  | `${1:columns}: Sequelize.${2:STRING}$3,`|
 | `ccmss→` | `${1:column}: Sequelize.STRING$2`       |
 | `ccmsi→` | `${1:column}: Sequelize.INTERGER$2`     |
 | `ccmsf→` | `${1:column}: Sequelize.FLOAT$2`        |
-| `ccmse→` | `${1:column}: Sequelize.ENUM$2`         	|
+| `ccmse→` | `${1:column}: Sequelize.ENUM$2`          |
 
 ### MongoDB
 
 | Prefix   | Method                              |
 | -----:   | ----------------------------------- |
-| `cfmoo→` | `Create a Moongoose model`        	 |
+| `cfmoo→` | `Create a Moongoose model`          |
 
 ### Node.js
 
-| Prefix | Method                              																													 |
-| -----: | ----------------------------------- 																													 |
-| `cfne→`| Creates a basic express file        																													 |
-| `fcc→` | create file of class                																													 |
-| `fcce→`| create a file of class with extends  																												 |
-| `fgr→` | Creates routes.js                   																													 |
-| `gr→`  | `${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});` 											 |
-| `grp→` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:Rota}Controller.${6:index});`							 |
+| Prefix | Method                                                            |
+| -----: | -----------------------------------                               |
+| `cfne→`| Creates a basic express file                                      |
+| `cfne→`| Creates a basic express file TS                                      |
+| `fcc→` | create file of class                                              |
+| `fcce→`| create a file of class with extends                               |
+| `fgr→` | Creates routes.js                                                 |
+| `gr→`  | `${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});`             |
+| `grp→` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:Rota}Controller.${6:index});`        |
 | `grpm→`| `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});`|
 | `grm→` | `${1:routes}.${2:get}('/${3:rotas}', ${4:middlewares} ${5:Rota}Controller.${6:index});`       |
 
@@ -136,18 +137,18 @@ constructor() {}
 
 ```javascript
 new Promise((resolve, reject) => {,
-	let condition = false;
-	if(condition) {
-		resolve('data')
-			} else {
-			  reject('error')
-		}
-	})
+ let condition = false;
+ if(condition) {
+  resolve('data')
+   } else {
+     reject('error')
+  }
+ })
 ```
 
 ### cfne
 
-```javascript 
+```javascript
 const express = require('express');
   
 const ${1:server} = express();,
@@ -165,23 +166,25 @@ ${1:server}.listen(port);
 
 ```javascript
 import { Router } from 'express';
-			
+   
 const ${1:routes} = new Router();
-			
+   
 export default ${1:routes};
 ```
+
 ### igr
 
 ```javascript
 ${1:app}.${2:get}('/${3:rotas}', (req, res) => {
-	res.json({});
-	});
+ res.json({});
+ });
 ```
+
 ### igrm
 
 ```javascript
 ${1:app}.${2:get}('/${3:rotas}', ${4:middleware} , (req, res) => {
-	res.json({});
+ res.json({});
 });
 ```
 
@@ -189,62 +192,65 @@ ${1:app}.${2:get}('/${3:rotas}', ${4:middleware} , (req, res) => {
 
 ```javascript
 ${1:app}.${2:get}('/${3:rotas}/:${4:id}', (req, res) => {
-	res.json({});
+ res.json({});
 });
 ```
+
 ### igrpm
 
 ```javascript
 ${1:app}.${2:get}('/${3:rotas}/:${5:id}', ${4:middleware}, (req, res) => {
-	res.json({});
+ res.json({});
 });
 
 ```
+
 ### fcc
 
 ```javascript
 class $TM_FILENAME_BASE {}
-			
+   
 export default new $TM_FILENAME_BASE();
 ```
+
 ### fcce
 
 ```javascript
 class $TM_FILENAME_BASE extends ${1:Class}  {
 
-	}
-			
-	export default new $TM_FILENAME_BASE();
+ }
+   
+ export default new $TM_FILENAME_BASE();
 ```
 
 ### cms
 
 ```javascript
 import Sequelize, { Model } from 'sequelize';
-			
+   
 class $TM_FILENAME_BASE extends Model {
-	static init(sequelize) {
-		super.init(
-			{
-			  $1
-			},
-			{ sequelize }
-		);
-			
-		return this;
-		}
-	}
-			
-	export default $TM_FILENAME_BASE;
+ static init(sequelize) {
+  super.init(
+   {
+     $1
+   },
+   { sequelize }
+  );
+   
+  return this;
+  }
+ }
+   
+ export default $TM_FILENAME_BASE;
 ```
 
 ### cfmoo
 
 ```javascript
 import mongoose from 'mongoose';
-			
+   
 const ${1:ExemploSchema} = new mongoose.Schema({});
-			
+   
 export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});
 ```
 
@@ -252,8 +258,8 @@ export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});
 
 ```javascript
 ${1:server}.use(req, res, next) => {
-			
-	next();
+   
+ next();
 });
 ```
 
@@ -261,8 +267,8 @@ ${1:server}.use(req, res, next) => {
 
 ```javascript
 ${1:app}.use(function(err, req, res, next) {
-	console.error(err.stack);
-	res.status(500).send('Algo Errado :/!');
+ console.error(err.stack);
+ res.status(500).send('Algo Errado :/!');
 });
 ```
 
@@ -270,8 +276,8 @@ ${1:app}.use(function(err, req, res, next) {
 
 ```javascript
 function ${1:functionName} (req, res, next) => {
-			
-	next();
+   
+ next();
 });
 
 ```
@@ -280,52 +286,64 @@ function ${1:functionName} (req, res, next) => {
 
 ```javascript
 function ${1:functionName} (req, res, next) => {
-			
-	next();
+   
+ next();
 });
 ```
 
 ## TypeScript
 
 ### interface
+
 ```javascript
  interface Interface {
   label: string;
 }   
 ```
+
 ### expotInterface
+
 ```TS
 export interface Interface {
   label: value;
 }
  
  ```
+
 ### exportInterfaceM
-```TS 
+
+```TS
 export interface IterfaceMethod {
   IterfaceMethod(paramether): IterfaceMethod<IterfaceMethod>;
 }
 ```
 
 ### tigr
+
 ```TS
 app.get('/rotas', (request: Request, response: Response) => {
   response.json({});
 });
  ```
+
 ### tigrp
+
 ```TS
 app.get('/rotas/:id', (request: Request, response: Response) => {
   response.json({});
 });
  ```
+
 ### tigrpm
+
 ```TS
 app.get('/rotas/:id', [middleware], (request: Request, response: Response) => {
   response.json({});
 }); 
 ```
+
 ### tigrm
+
 ```TS
 app.get('/rotas', [middleware] , (request: Request, response: Response) => {
   response.json({});
