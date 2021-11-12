@@ -71,5 +71,22 @@
       ""
     ],
     "description": "enum"
+  },
+  "createServerExpressStructured": {
+    "prefix": "tcfne",
+    "body": [
+      "import express from 'express';",
+      "",
+      "const ${1:server} = express();",
+      "",
+      "${1:server}.use(express.json());",
+      "",
+      "const PORT = 3000;",
+      "",
+      "${1:server}.get('/', (request, response) => response.json({message: 'Hello World!'}));",
+      "",
+      "${1:server}.listen(PORT);"
+    ],
+    "description": "Creates a basic express file in TS"
   }
 }

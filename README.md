@@ -129,10 +129,7 @@ I.E. `tsrcc`
 ### constructor
 
 ```javascript
-constructor() {
-	$1
-	}
-
+constructor() {}
 ```
 
 ### cpro
@@ -145,12 +142,12 @@ new Promise((resolve, reject) => {,
 			} else {
 			  reject('error')
 		}
-		})
+	})
 ```
 
 ### cfne
 
-```javascript
+```javascript 
 const express = require('express');
   
 const ${1:server} = express();,
@@ -170,7 +167,6 @@ ${1:server}.listen(port);
 import { Router } from 'express';
 			
 const ${1:routes} = new Router();
-	$2
 			
 export default ${1:routes};
 ```
@@ -186,7 +182,7 @@ ${1:app}.${2:get}('/${3:rotas}', (req, res) => {
 ```javascript
 ${1:app}.${2:get}('/${3:rotas}', ${4:middleware} , (req, res) => {
 	res.json({});
-		});
+});
 ```
 
 ### igrp
@@ -194,32 +190,28 @@ ${1:app}.${2:get}('/${3:rotas}', ${4:middleware} , (req, res) => {
 ```javascript
 ${1:app}.${2:get}('/${3:rotas}/:${4:id}', (req, res) => {
 	res.json({});
-		});
-
+});
 ```
 ### igrpm
 
 ```javascript
 ${1:app}.${2:get}('/${3:rotas}/:${5:id}', ${4:middleware}, (req, res) => {
 	res.json({});
-		});
+});
 
 ```
 ### fcc
 
 ```javascript
-class $TM_FILENAME_BASE {
-	$1
-	}
+class $TM_FILENAME_BASE {}
 			
 export default new $TM_FILENAME_BASE();
-
 ```
 ### fcce
 
 ```javascript
 class $TM_FILENAME_BASE extends ${1:Class}  {
-	$2
+
 	}
 			
 	export default new $TM_FILENAME_BASE();
@@ -240,7 +232,7 @@ class $TM_FILENAME_BASE extends Model {
 		);
 			
 		return this;
-			}
+		}
 	}
 			
 	export default $TM_FILENAME_BASE;
@@ -251,9 +243,7 @@ class $TM_FILENAME_BASE extends Model {
 ```javascript
 import mongoose from 'mongoose';
 			
-const ${1:ExemploSchema} = new mongoose.Schema({
-			   
-	});
+const ${1:ExemploSchema} = new mongoose.Schema({});
 			
 export default mongoose.model(' $TM_FILENAME_BASE',  ${1:ExemploSchema});
 ```
@@ -315,7 +305,6 @@ export interface Interface {
 export interface IterfaceMethod {
   IterfaceMethod(paramether): IterfaceMethod<IterfaceMethod>;
 }
-
 ```
 
 ### tigr
