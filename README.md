@@ -118,6 +118,7 @@ I.E. `tsrcc`
 | `tcfne→`| Creates a basic express file TS                                      |
 | `fcc→` | create file of class                                              |
 | `fcce→`| create a file of class with extends                               |
+| `fccd→`| create a file of class destruct                               |
 | `fgr→` | Creates routes.js                                                 |
 | `gr→`  | `${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});`             |
 | `grp→` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:Rota}Controller.${6:index});`        |

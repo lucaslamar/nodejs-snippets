@@ -373,6 +373,17 @@
     ],
     "description": "create file class"
   },
+  "createDestructClass": {
+    "prefix": "fccd",
+    "body": [
+      "class $TM_FILENAME_BASE {",
+      "$1",
+      "}",
+      "",
+      "export { $TM_FILENAME_BASE }"
+    ],
+    "description": "create file destruct class"
+  },
   "createClassExtends": {
     "prefix": "fcce",
     "body": [
