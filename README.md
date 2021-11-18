@@ -33,7 +33,7 @@ To install an extension you can run **Command Pallete** using the command `Ctrl 
 
 To install an extension locally, you can run the ** Command Pallete ** using `Ctrl + Shift + P` or ` Cmd + Shift + P`, typing `Preferences: Configure User Snippets + New Global Snippets File OR New snippets for local project` Create the files and copy the **snippets.json** AND **ts-snippets.json**. As shown in the gif below.
 
-![Node Component](../assets/snippets.gif)
+![Node Component](https://github.com/lucaslamar/nodejs-snippets/blob/master/assets/snippets.gif)
 
 ### Supported languages (file extensions)
 
