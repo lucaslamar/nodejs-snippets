@@ -29,6 +29,12 @@
 To install an extension you can run **Command Pallete** using the command `Ctrl + Shift + P` or` Cmd + Shift + P`, type `Install Extensions` and finally give an`Enter`, done that search by BelleEpoque and you will find the extension
 **es6-nodejs-snippets**.
 
+### Local Installation
+
+To install an extension locally, you can run the ** Command Pallete ** using `Ctrl + Shift + P` or ` Cmd + Shift + P`, typing `Preferences: Configure User Snippets + New Global Snippets File OR New snippets for local project` Create the files and copy the **snippets.json** AND **ts-snippets.json**. As shown in the gif below.
+
+![Node Component](../assets/snippets.gif)
+
 ### Supported languages (file extensions)
 
 - JavaScript (.js)
@@ -364,6 +370,9 @@ export default new name();
 
 ### tfccid
 ```TS
+class name implements Class  {}
+
+export { name };
 
 ```
 
