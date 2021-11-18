@@ -51,7 +51,7 @@
     ],
     "description": "Export default function in ES7 syntax"
   },
-  "method": {
+  "met": {
     "prefix": "met",
     "body": [
       "${1:methodName} = (${2:params}) => {",
@@ -60,6 +60,13 @@
       ""
     ],
     "description": "Creates a method inside a class in ES7 syntax"
+  },
+  "method": {
+    "prefix": "method",
+    "body": [
+      "${1:methodName}(${1:params}) {$3};"
+    ],
+    "description": "method"
   },
   "forEach": {
     "prefix": "fre",
@@ -231,9 +238,7 @@
   "constructor": {
     "prefix": "constructor",
     "body": [
-      "   constructor() {",
-      "        $1",
-      "    }"
+      "constructor() {$1};"
     ],
     "description": "constructor"
   },
@@ -293,6 +298,17 @@
       "export default ${1:routes};"
     ],
     "description": "Creates routes.js"
+  },
+  "genereteRouterFileDestruct": {
+    "prefix": "fgrd",
+    "body": [
+      "import { Router } from 'express';",
+      "",
+      "const routes = Router();",
+      "",
+      "export { routes };"
+    ],
+    "description": "genereteRouterFileDestruct"
   },
   "createIndexRoute": {
     "prefix": "igr",
@@ -394,6 +410,17 @@
       "export default new $TM_FILENAME_BASE();"
     ],
     "description": "create a class with extends"
+  },
+  "createClassExtendsDestruct": {
+    "prefix": "fcced",
+    "body": [
+      "class $TM_FILENAME_BASE extends ${1:Class}  {",
+      "$2",
+      "}",
+      "",
+      "export { $TM_FILENAME_BASE() };"
+    ],
+    "description": "create a class with extends Destruct"
   },
   "configModelSequelize": {
     "prefix": "cms",

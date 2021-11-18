@@ -88,5 +88,27 @@
       "${1:server}.listen(PORT);"
     ],
     "description": "Creates a basic express file in TS"
+  },
+  "createClasImplements": {
+    "prefix": "tfcci",
+    "body": [
+      "class $TM_FILENAME_BASE implements ${1:Class}  {",
+      "$2",
+      "}",
+      "",
+      "export default new $TM_FILENAME_BASE();"
+    ],
+    "description": "create a class with implements"
+  },
+  "createClassImplementsDestruct": {
+    "prefix": "tfccid",
+    "body": [
+      "class $TM_FILENAME_BASE implements ${1:Class}  {",
+      "$2",
+      "}",
+      "",
+      "export { $TM_FILENAME_BASE };"
+    ],
+    "description": "create a class with implements Destruct"
   }
 }

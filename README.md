@@ -70,6 +70,7 @@ I.E. `tsrcc`
 |  `sto→`  | `setTimeout(() => {});`                         |
 |  `prom→`  | `return new Promise((resolve, reject) => {});`    |
 |  `thenc→` | `.then((res) => {}).catch((err) => {});`          |
+|  `met→`  | `${1:methodName}(${1:params}) {$3};`                    |
 |  `met→`  | `methodName = (params) => { }`                    |
 |  `amet→` | `async method(params) {}`                        |
 |  `constructor` | `constructor() {}`                         |
@@ -120,6 +121,7 @@ I.E. `tsrcc`
 | `fcce→`| create a file of class with extends                               |
 | `fccd→`| create a file of class destruct                               |
 | `fgr→` | Creates routes.js                                                 |
+| `fgrd→` | Creates destruct routes.js                                                 |
 | `gr→`  | `${1:routes}.${2:get}('/${3:rotas}', ${4:Rota}Controller.${5:index});`             |
 | `grp→` | `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:Rota}Controller.${6:index});`        |
 | `grpm→`| `${1:routes}.${2:get}('/${3:rotas}/:${4:id}', ${5:midware} , ${6:Rota}Controller.${7:index});`|
@@ -351,6 +353,18 @@ app.get('/rotas', [middleware] , (request: Request, response: Response) => {
   response.json({});
 });
 }); 
+```
+
+### tfcci
+```TS
+class name implements Class  {}
+
+export default new name();
+```
+
+### tfccid
+```TS
+
 ```
 
 <!-- CONTRIBUTING -->
