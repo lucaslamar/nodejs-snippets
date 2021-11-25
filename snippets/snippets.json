@@ -64,7 +64,7 @@
   "method": {
     "prefix": "method",
     "body": [
-      "${1:methodName}(${1:params}) {$3};"
+      "${1:methodName}(${2:params}) {$3};"
     ],
     "description": "method"
   },
