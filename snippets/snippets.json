@@ -418,9 +418,20 @@
       "$2",
       "}",
       "",
-      "export { $TM_FILENAME_BASE() };"
+      "export { $TM_FILENAME_BASE };"
     ],
     "description": "create a class with extends Destruct"
+  },
+  "createClassImplementsDestruct": {
+    "prefix": "fccid",
+    "body": [
+      "class $TM_FILENAME_BASE implements ${1:Class}  {",
+      "$2",
+      "}",
+      "",
+      "export { $TM_FILENAME_BASE };"
+    ],
+    "description": "create a class with implements Destruct"
   },
   "configModelSequelize": {
     "prefix": "cms",
